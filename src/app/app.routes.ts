@@ -4,6 +4,7 @@ import { MeesPortfolioComponent } from './pages/mees-portfolio/mees-portfolio.co
 import { TheonPortfolioComponent } from './pages/theon-portfolio/theon-portfolio.component';
 import { VincentPortfolioComponent } from './pages/vincent-portfolio/vincent-portfolio.component';
 import { HomeComponent } from './pages/home/home.component';
+import { CssAnimationsLearningPageComponent } from './pages/css-animations-learning-page/css-animations-learning-page.component';
 
 
 export const routes: Routes = [
@@ -13,4 +14,5 @@ export const routes: Routes = [
   { path: 'mees', component: MeesPortfolioComponent },
   { path: 'theon', component: TheonPortfolioComponent },
   { path: 'vincent', component: VincentPortfolioComponent },
+  { path: 'css-animations', component: CssAnimationsLearningPageComponent },
 ];
