@@ -1,0 +1,27 @@
+/* app.component.css */
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.outer-ball {
+    width: 200px;
+    height: 200px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    position: relative; /* Position relative to move inner ball within it */
+}
+
+.inner-ball {
+    width: 20px;
+    height: 20px;
+    background-color: #1150d8;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.1s ease; /* Smooth transition */
+}
