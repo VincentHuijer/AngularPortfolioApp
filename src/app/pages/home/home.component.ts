@@ -2,7 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { HeaderComponent } from '../../header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AnimatedSomethingComponent } from '../../animatedCSSComponents/animated-something/animated-something.component';
-import { BouncingBallComponent } from '../../animatedCSSComponents/movingBallProgress/bouncing-ball/bouncing-ball.component';
+import { BouncingBallComponent } from '../../animatedCSSComponents/movingBallProgress/bouncingBalls/bouncing-ball/bouncing-ball.component';
 
 @Component({
   selector: 'app-home',

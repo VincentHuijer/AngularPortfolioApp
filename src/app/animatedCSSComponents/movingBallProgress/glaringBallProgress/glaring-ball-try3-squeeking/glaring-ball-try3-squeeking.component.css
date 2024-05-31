@@ -10,7 +10,7 @@ body {
 	height: 50px;
 	margin: 5px;
 	float: left;
-	overflow: hidden;
+	overflow: hidden; /*keeps the inner ball into the big ball*/
 	background-color: #e50c0c;
 	border-radius: 50%;
 }
