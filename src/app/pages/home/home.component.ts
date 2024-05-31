@@ -7,7 +7,7 @@ import { BouncingBallComponent } from '../../animatedCSSComponents/movingBallPro
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, AnimatedSomethingComponent, BouncingBallComponent],
+  imports: [HeaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
