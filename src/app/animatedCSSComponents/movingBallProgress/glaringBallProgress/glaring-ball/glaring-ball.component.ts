@@ -13,9 +13,10 @@ export class GlaringBallComponent {
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    const ballElement = this.ball.nativeElement;
-    const x = event.clientX - ballElement.offsetWidth;
-    const y = event.clientY - ballElement.offsetHeight;
-    ballElement.style.transform = `translate(${x}px, ${y}px)`;
+    //doesnt work but because it cant find the nativeElement its causing errors with each mouse movement and slows down the site
+    // const ballElement = this.ball.nativeElement;
+    // const x = event.clientX - ballElement.offsetWidth;
+    // const y = event.clientY - ballElement.offsetHeight;
+    // ballElement.style.transform = `translate(${x}px, ${y}px)`;
   }
 }
