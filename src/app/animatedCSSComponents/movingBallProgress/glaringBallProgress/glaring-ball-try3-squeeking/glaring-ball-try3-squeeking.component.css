@@ -1,0 +1,24 @@
+body {
+	background-color: #000;
+}
+
+.eye3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	float: left;
+	overflow: hidden; /*keeps the inner ball into the big ball*/
+	background-color: #e50c0c;
+	border-radius: 50%;
+}
+
+.eye-ball3 {
+	width: 30px;
+	height: 30px;
+	background-color: #000;
+	border-radius: 50%;
+	transition: all .2s linear;
+}
