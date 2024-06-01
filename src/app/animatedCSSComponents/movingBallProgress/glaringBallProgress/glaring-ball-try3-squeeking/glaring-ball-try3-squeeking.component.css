@@ -15,6 +15,10 @@ body {
 	border-radius: 50%;
 }
 
+[role="button"] {
+  cursor: pointer;
+}
+
 .eye-ball3 {
 	width: 30px;
 	height: 30px;

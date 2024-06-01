@@ -1,0 +1,17 @@
+@keyframes shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  10% { transform: translate(-5px, -5px) rotate(-2deg); }
+  20% { transform: translate(5px, 5px) rotate(2deg); }
+  30% { transform: translate(-5px, 5px) rotate(-2deg); }
+  40% { transform: translate(5px, -5px) rotate(2deg); }
+  50% { transform: translate(-5px, -5px) rotate(-2deg); }
+  60% { transform: translate(5px, 5px) rotate(2deg); }
+  70% { transform: translate(-5px, 5px) rotate(-2deg); }
+  80% { transform: translate(5px, -5px) rotate(2deg); }
+  90% { transform: translate(-5px, -5px) rotate(-2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+img.shake-on-hover:hover {
+  animation: shake 0.5s linear infinite;
+}

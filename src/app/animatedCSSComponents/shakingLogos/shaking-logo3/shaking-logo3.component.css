@@ -1,0 +1,12 @@
+@keyframes subtleShake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-2px, -2px) rotate(-1deg); }
+  40% { transform: translate(2px, 2px) rotate(1deg); }
+  60% { transform: translate(-2px, 2px) rotate(-1deg); }
+  80% { transform: translate(2px, -2px) rotate(1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+img.shake-on-hover:hover {
+  animation: subtleShake 0.5s linear infinite;
+}
