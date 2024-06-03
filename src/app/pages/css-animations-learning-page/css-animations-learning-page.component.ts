@@ -10,6 +10,7 @@ import { ShakingLogoComponent } from '../../animatedCSSComponents/shakingLogos/s
 import { ShakingLogo2Component } from '../../animatedCSSComponents/shakingLogos/shaking-logo2/shaking-logo2.component';
 import { ShakingLogo3Component } from '../../animatedCSSComponents/shakingLogos/shaking-logo3/shaking-logo3.component';
 import { MovingBallWithLogoComponent } from '../../animatedCSSComponents/movingBallProgress/moving-ball-with-logo/moving-ball-with-logo.component';
+import { GsapTestComponentComponent } from '../../animatedCSSComponents/gsapComponents/gsap-test-component/gsap-test-component.component';
 
 @Component({
   selector: 'app-css-animations-learning-page',
