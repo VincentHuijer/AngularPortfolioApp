@@ -1,0 +1,57 @@
+<div class="letter container">
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+</div>
+
+export class MatrixStep2LetterComponent {
+  @ViewChild('letter') letter!: ElementRef;
+
+  constructor() {}
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      if (this.letter) {
+        gsap.to(this.letter.nativeElement, {
+          y: 200,
+          duration: 10,
+          color: '#0CB000'
+        });
+      } else {
+        console.error('letter element not found');
+      }
+    }, 0);
+  }
+}
+
+
+
+<div class="letter container">
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+  <div #letter class="letter">a</div>
+</div>
+
+Only the first letter has the gsap effects

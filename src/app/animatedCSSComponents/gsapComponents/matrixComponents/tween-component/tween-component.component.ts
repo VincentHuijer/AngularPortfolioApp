@@ -10,14 +10,13 @@ import { gsap } from 'gsap';
   styleUrl: './tween-component.component.css'
 })
 export class TweenComponentComponent implements AfterViewInit {
-  @ViewChild('box') box!: ElementRef;
+  @ViewChild('letter') box!: ElementRef;
 
   constructor() {}
 
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit called');
     setTimeout(() => {
-      console.log('box:', this.box); // Debugging log after a timeout
       if (this.box) {
         gsap.to(this.box.nativeElement, {
           y: 200,

@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.letter {
+  font-size: 48px;
+  position: relative;
+  top: 0;    
+}
