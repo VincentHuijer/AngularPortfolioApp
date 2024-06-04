@@ -6,6 +6,7 @@ import { VincentPortfolioComponent } from './pages/vincent-portfolio/vincent-por
 import { HomeComponent } from './pages/home/home.component';
 import { CssAnimationsLearningPageComponent } from './pages/css-animations-learning-page/css-animations-learning-page.component';
 import { GsapAnimationsLearningPageComponent } from './pages/gsap-animations-learning-page/gsap-animations-learning-page.component';
+import { GsapAnimations2Component } from './pages/gsap-animations2/gsap-animations2.component';
 
 
 export const routes: Routes = [
@@ -17,4 +18,5 @@ export const routes: Routes = [
   { path: 'vincent', component: VincentPortfolioComponent },
   { path: 'css-animations', component: CssAnimationsLearningPageComponent },
   { path: 'gsap-animations', component: GsapAnimationsLearningPageComponent },
+  { path: 'gsap-animations2', component: GsapAnimations2Component },
 ];
