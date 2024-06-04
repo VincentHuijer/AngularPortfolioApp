@@ -46,7 +46,9 @@ import { gsap } from 'gsap';
     }
   
     getRandomCharacter(): string {
-      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:\'",.<>?/`~';
+      // '一二三四五六七八九十百千万' +
+      // '你好吗我很好谢谢再见';
       return chars.charAt(Math.floor(Math.random() * chars.length));
     }
   }
