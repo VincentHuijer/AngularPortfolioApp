@@ -23,7 +23,7 @@ export class yoyoComponentComponent implements AfterViewInit {
           x: '100vw',
           xPercent: -100,
           duration: 2,
-          repeat: 2, //3x afspelen
+          repeat: 50, //3x afspelen
           yoyo: true,
           backgroundColor: '#8d3dae',
         });
