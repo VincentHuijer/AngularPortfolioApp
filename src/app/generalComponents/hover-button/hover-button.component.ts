@@ -10,21 +10,24 @@ import { gsap } from 'gsap';
 })
 export class HoverButtonComponent implements AfterViewInit {
   @Input() width: string = '250px';
-  @Input() height: string = '250px';
+  @Input() height: string = '2350px';
   @Input() text: string = 'Click Me';
   @Input() defaultColor: string = '#436EFC';
   @Input() hoverColor: string = '#2616E7';
+  @Input() borderRadius: string = '0';
+  @Input() fontSize: Number = 20;
 
   constructor(private el: ElementRef) {}
 
   ngAfterViewInit(): void {
     const button = this.el.nativeElement.querySelector('button');
 
-    gsap.to(button, {
-      backgroundColor: this.hoverColor,
-      duration: 0.3,
-      paused: true,
-      reversed: true,
+    gsap.set(button, {
+      width: this.width,
+      height: this.height,
+      backgroundColor: this.defaultColor,
+      borderRadius: this.borderRadius,
+      fontSize: Number(this.fontSize)
     });
 
     button.addEventListener('mouseenter', () => {
