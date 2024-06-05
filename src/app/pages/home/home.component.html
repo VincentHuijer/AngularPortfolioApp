@@ -9,6 +9,17 @@
 
 <body>
   <app-header></app-header>
+
+  <div>
+    user: Hello
+  </div>
+  <div>
+    AI: Boo
+  </div>
+  <app-chat-log [userMessages]="userMessages" [aiMessages]="aiMessages"></app-chat-log>
+  <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
+  <!-- messages get saved in the home TS file in the user messages array so they can be given along with ai messages to chat log -->
+
 </body>
 
 </html>
