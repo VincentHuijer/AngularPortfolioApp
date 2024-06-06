@@ -10,11 +10,11 @@ import { gsap } from 'gsap';
 })
 export class HoverButtonComponent implements AfterViewInit {
   @Input() width: string = '250px';
-  @Input() height: string = '2350px';
+  @Input() height: string = '80px';
   @Input() text: string = 'Click Me';
   @Input() defaultColor: string = '#436EFC';
   @Input() hoverColor: string = '#2616E7';
-  @Input() borderRadius: string = '0';
+  @Input() borderRadius: string = '12';
   @Input() fontSize: Number = 20;
 
   constructor(private el: ElementRef) {}
