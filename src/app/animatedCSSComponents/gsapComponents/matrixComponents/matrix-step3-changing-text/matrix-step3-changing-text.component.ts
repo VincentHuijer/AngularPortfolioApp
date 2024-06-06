@@ -25,15 +25,15 @@ import { gsap } from 'gsap';
             const randStag = gsap.utils.random(0.1, 0.15); 
             gsap.to(children, {
               duration: randDur,
-              autoAlpha: 1, //visibility and opacity on
-              stagger: {
+              autoAlpha: 1, //visibility and opacity on (fading in)
+              stagger: { //delay between start of each succesive(opeenvolgende) animation in sequance.
                 each: randStag
               }
             });
             gsap.to(children, {
               duration: randDur,
               delay: randDur,
-              autoAlpha: 0, //visibilty and opacity off
+              autoAlpha: 0, //visibilty and opacity off (fading out)
               stagger: {
                 each: randStag
               }
