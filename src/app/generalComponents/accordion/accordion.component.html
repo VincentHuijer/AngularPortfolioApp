@@ -1,5 +1,6 @@
 <div class="accordion">
-  <button (click)="toggleMenu()" class="accordion-toggle">Portfolios</button>
+  <button (click)="toggleMenu()" class="accordion-toggle">Portfolios<app-chevronDown></app-chevronDown></button>
+  
   <nav [class.open]="isMenuOpen">
     <a routerLink="/" routerLinkActive="active" href="/">Home</a>
     <a routerLink="/ashray" routerLinkActive="active" href="/ashray">Ashray</a>

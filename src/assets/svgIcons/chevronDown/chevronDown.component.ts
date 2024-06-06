@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-svg',
+  selector: 'app-chevronDown',
   standalone: true,
   imports: [],
   template: `
@@ -11,6 +11,6 @@ import { Component, Input } from '@angular/core';
   `,
   styles: ``
 })
-export class SvgComponent {
+export class chevronDownComponent {
   @Input() class = '';
 }
