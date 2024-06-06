@@ -1,8 +1,10 @@
 <div>
-  <div>
-    <div>{{ userMessages[userMessages.length - 1] }}</div>
-  </div>
-  <div>
-    <div>{{ aiMessages[aiMessages.length - 1] }}</div>
+  <div *ngIf="userMessages.length > 0 || aiMessages.length > 0">
+    <div *ngFor="let message of userMessages; let i = index">
+      {{ message }}
+      <div *ngIf="aiMessages[i]">
+        {{ aiMessages[i] }}
+      </div>
+    </div>
   </div>
 </div>
