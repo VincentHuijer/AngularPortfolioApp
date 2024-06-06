@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
 export class AccordionComponent {
   isMenuOpen = false;
   @Input() links: { label: string; routerLink: string; }[] = [];
-
+  @Input() title: string = "undefined"
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

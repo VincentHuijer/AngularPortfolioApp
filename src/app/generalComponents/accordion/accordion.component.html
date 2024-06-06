@@ -1,6 +1,6 @@
 <div class="accordion">
   <button (click)="toggleMenu()" class="accordion-toggle">
-    Portfolios <app-chevronDown></app-chevronDown>
+    {{ title }} <app-chevronDown></app-chevronDown>
   </button>
   <nav [class.open]="isMenuOpen">
     <ng-container *ngFor="let link of links">
