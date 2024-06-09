@@ -5,11 +5,13 @@ import { AnimatedSomethingComponent } from '../../animatedCSSComponents/animated
 import { BouncingBallComponent } from '../../animatedCSSComponents/movingBallProgress/bouncingBalls/bouncing-ball/bouncing-ball.component';
 import { MessageComponent } from '../../generalComponents/message-component/message-component.component';
 import { ChatLogComponent } from '../../generalComponents/chat-log/chat-log.component';
+import { AngleBracketsComponent } from '../../../assets/svgIcons/angle-brackets/angle-brackets.component';
+import { AsterikComponent } from '../../../assets/svgIcons/asterik/asterik.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, MessageComponent, ChatLogComponent],
+  imports: [HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
