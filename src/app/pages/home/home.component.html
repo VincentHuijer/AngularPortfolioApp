@@ -2,8 +2,8 @@
 <div class="h-full bg-[#1F1F1F] flex items-center justify-center">
   <div class="w-11/12 flex flex-col items-center">
     <div class="self-start text-[#C6E643] font-serif" style="font-size: 200px;">AI Chat</div>
-    <div class="items-center bg-[#575757] w-3/6 rounded-xl p-4">
-      <div *ngIf="userMessages; else chatContent">
+    <div class="items-center bg-[rgb(87,87,87)] w-3/6 rounded-xl p-4">
+      <div *ngIf="userMessages.length === 0; else chatContent">
         <div class="w-4/6 mx-auto flex flex-col items-center">
           <app-asterik width="100" height="100"></app-asterik>
           <div class="text-white text-6xl">Hoe kan ik je helpen?</div>
@@ -27,11 +27,13 @@
             <div class="text-[#D3D3D3]">Hier komt een kleine text</div>
           </div>
         </div>
-        <app-message-component></app-message-component>
+        <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
       </div>
+
+
       <ng-template #chatContent>
-        <app-message-component></app-message-component>
-        <app-chat-log></app-chat-log>
+        <app-chat-log [userMessages]="userMessages" [aiMessages]="aiMessages"></app-chat-log>
+        <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
       </ng-template>
     </div>
  

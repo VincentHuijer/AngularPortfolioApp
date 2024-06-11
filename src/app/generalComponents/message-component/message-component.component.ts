@@ -17,7 +17,7 @@ export class MessageComponent {
   @Output() messageSent = new EventEmitter<string>();
 
   sendMessage() { 
-    console.log('Message sent:::::', this.message);
+    console.log('Message sent from messageComponent ->', this.message);
     if (this.message.trim()) {
       this.messageSent.emit(this.message); //emit message toward home component: --> ((messageSent)="onMessageSent($event)")
       this.message = '';

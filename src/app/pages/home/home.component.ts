@@ -19,18 +19,20 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css',
 })
 
-export class HomeComponent {
-  userMessages: string[] = ['user: Hello'];
-  aiMessages: string[] = ['AI: Boo'];
+export class HomeComponent { //removed the empty strings cause it made the message count 1 by default. Very confusing.
+  userMessages: string[] = [];
+  aiMessages: string[] = [];
 
   onMessageSent(message: string) {
-    console.log('sending message')
+    console.log('userMessages before the message was received:', this.userMessages)
+    console.log('sending message', message)
     this.userMessages.push(`user: ${message}`);
+    console.log('current messages are:', this.userMessages)
     this.getAiResponse(message);
   }
   
   getAiResponse(userMessage: string) {
-    console.log('responding message')
+    console.log('responding message', userMessage)
     const aiResponse = `AI: "${userMessage}"`;
     this.aiMessages.push(aiResponse);
   }
