@@ -8,11 +8,12 @@ import { ChatLogComponent } from '../../generalComponents/chat-log/chat-log.comp
 import { AngleBracketsComponent } from '../../../assets/svgIcons/angle-brackets/angle-brackets.component';
 import { AsterikComponent } from '../../../assets/svgIcons/asterik/asterik.component';
 import { FooterComponent } from '../../footer/footer.component';
+import { ArrowButtonComponent } from '../../../assets/svgIcons/arrow-button/arrow-button.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, FooterComponent],
+  imports: [HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, FooterComponent, ArrowButtonComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

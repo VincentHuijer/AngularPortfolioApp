@@ -2,9 +2,9 @@
 <div class="h-full bg-[#1F1F1F] flex items-center justify-center">
   <div class="w-11/12 flex flex-col items-center">
     <div class="self-start text-[#C6E643] font-serif" style="font-size: 200px;">AI Chat</div>
-    <div class="items-center bg-[#575757] w-2/6 rounded-xl">
+    <div class="items-center bg-[#575757] w-3/6 rounded-xl p-4">
       <div class="w-4/6 mx-auto flex flex-col items-center">
-        <div class="text-[#C6E643] text-9xl"> *</div>
+        <app-asterik width="100" height="100"></app-asterik>
         <div class="text-white text-6xl">Hoe kan ik je helpen?</div>
         <div class="text-[#a49393] text-2xl">Deze AI chat helpt jou de student te vinden die het beste bij jouw behoeften past.</div>
       </div>
@@ -28,7 +28,7 @@
       </div>
       <div class="flex w-11/12 items-center mx-auto bg-white rounded-lg mb-5 justify-between">
         <div class="ml-4 text-2xl flex flex-row" >
-          <app-asterik></app-asterik>
+          <app-asterik width="34" height="38" color="black"></app-asterik>
           <div class="ml-2 text-2xl text-[#D3D3D3]">
             Type hier jouw vraag
           </div>
@@ -36,18 +36,21 @@
         </div>
        
         <div class="text-2xl">
-          🟩
+          <app-arrow-button/>
         </div>
       </div>
     </div>
+ 
 
 
-
-    <div class="w-full bg-white mt-12 p-6"></div>
-    <div>
+    <div class="w-full bg-white mt-12 p-6"></div> <!-- Wit balkje -->
+    <div class="relative w-full h-96 overflow-hidden">
       <img src="assets/fotos/Schoolmedia.png"/>
-      <div class="w-full bg-white p-6">
-        hello world
+      <div class="w-full flex items-center justify-end p-6 absolute bottom-0 right-0">
+        <div class="bg-white p-4 rounded-xl flex flex-row">
+          <p class="font-bold text-center content-center ">Bekijk portfolio's</p>
+          <app-arrow-button/>
+        </div>
       </div>
     </div>
 
