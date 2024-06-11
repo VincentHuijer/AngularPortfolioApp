@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ArrowButtonComponent } from '../../../assets/svgIcons/arrow-button/arrow-button.component';
+import { AsterikComponent } from '../../../assets/svgIcons/asterik/asterik.component';
 
 @Component({
   selector: 'app-message-component',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ArrowButtonComponent, AsterikComponent],
   templateUrl: './message-component.component.html',
   styleUrl: './message-component.component.css'
 })
