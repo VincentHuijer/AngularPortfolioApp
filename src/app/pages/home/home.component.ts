@@ -7,11 +7,12 @@ import { MessageComponent } from '../../generalComponents/message-component/mess
 import { ChatLogComponent } from '../../generalComponents/chat-log/chat-log.component';
 import { AngleBracketsComponent } from '../../../assets/svgIcons/angle-brackets/angle-brackets.component';
 import { AsterikComponent } from '../../../assets/svgIcons/asterik/asterik.component';
+import { AccordionComponent } from '../../generalComponents/accordion/accordion.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent],
+  imports: [HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, AccordionComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
