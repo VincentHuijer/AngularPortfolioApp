@@ -9,11 +9,12 @@ import { AngleBracketsComponent } from '../../../assets/svgIcons/angle-brackets/
 import { AsterikComponent } from '../../../assets/svgIcons/asterik/asterik.component';
 import { FooterComponent } from '../../footer/footer.component';
 import { ArrowButtonComponent } from '../../../assets/svgIcons/arrow-button/arrow-button.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, FooterComponent, ArrowButtonComponent],
+  imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, FooterComponent, ArrowButtonComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
