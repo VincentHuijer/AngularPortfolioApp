@@ -25,8 +25,11 @@ export class HomeComponent implements AfterViewInit {
 
   constructor(private renderer: Renderer2) {}
 
-  userMessages: string[] = [];
-  aiMessages: string[] = [];
+  // userMessages: string[] = [];
+  // aiMessages: string[] = [];
+
+  userMessages: string[] = ['test','test2', 'test3'];
+  aiMessages: string[] = ['response1', 'response2', 'response3'];
 
   onMessageSent(message: string) {
     console.log('userMessages before the message was received:', this.userMessages)

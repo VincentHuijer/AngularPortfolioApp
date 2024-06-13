@@ -1,0 +1,20 @@
+<div class="bg-[#0F2B0C] p-4">
+  <div class="text-[#D3D3D3] mb-4">
+    Deze vaardigheden zijn van Theon
+  </div>
+  <div class="text-[#C6E643] mb-4">
+    Theon is gespecialiseerd in Figma, Adobe Xd, Capcut. Wil je specifieker zoeken, zoek dan “laat mij een voorbeeld zien van gemaakte webdesign”
+  </div>
+  <div class="w-full max-w-xs mx-auto">
+    <div *ngFor="let skill of skills" class="mb-4">
+      <div class="text-center text-[#D3D3D3]">{{ skill.name }}</div>
+      <div class="flex flex-row">
+        <img [src]="logoBaseUrl + skill.logo" alt="{{ skill.name }} logo" class="h-6 w-6">
+        <div class="relative h-4 w-64 bg-gray-200 rounded-lg overflow-hidden mx-auto">
+          <div class="absolute left-0 h-full bg-blue-500 transform origin-left" [style.width]="skill.level + '%'"></div>
+        </div>
+        <div class="text-center text-[#D3D3D3] items-center">{{ skill.level }}%</div>
+      </div>
+    </div>
+  </div>
+</div>
