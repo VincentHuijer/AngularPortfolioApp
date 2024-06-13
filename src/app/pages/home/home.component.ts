@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, NgModule, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { HeaderComponent } from '../../header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AnimatedSomethingComponent } from '../../animatedCSSComponents/animated-something/animated-something.component';
@@ -20,7 +20,11 @@ import { HtmlLogoComponent } from '../../../assets/svgIcons/html-logo/html-logo.
   styleUrl: './home.component.css',
 })
 
-export class HomeComponent { //removed the empty strings cause it made the message count 1 by default. Very confusing.
+export class HomeComponent implements AfterViewInit {
+  @ViewChildren('autoHovering') hoverElements!: QueryList<ElementRef>;
+
+  constructor(private renderer: Renderer2) {}
+
   userMessages: string[] = [];
   aiMessages: string[] = [];
 
@@ -36,5 +40,12 @@ export class HomeComponent { //removed the empty strings cause it made the messa
     console.log('responding message', userMessage)
     const aiResponse = `AI: "${userMessage}"`;
     this.aiMessages.push(aiResponse);
+  }
+
+  ngAfterViewInit() {
+    this.hoverElements.forEach((element: ElementRef) => {
+      const randomDuration = (Math.random() * 6 + 2).toFixed(6); // Generates a random duration between 2s and 4s
+      this.renderer.setStyle(element.nativeElement, 'animation-duration', `${randomDuration}s`);
+    });
   }
 }

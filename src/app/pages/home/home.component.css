@@ -22,7 +22,7 @@ img.shake-on-hover:hover {
 }
 
 .rotaterLeft {
-  animation: rotateAntiClockwise 2s linear infinite;
+  animation: rotateAntiClockwise 60s linear infinite;
 }
 
 @keyframes rotateAntiClockwise {
@@ -33,3 +33,38 @@ img.shake-on-hover:hover {
 .rotate-on-hover:hover {
   animation: rotateClockwise 2s linear;
 } 
+
+.autoHovering{
+  animation: hover 3s infinite ease-in-out;
+}
+
+.autoHoveringRotating {
+  animation: bigHover 3s infinite ease-in-out;
+  animation: rotateClockwise 10 linear infinite;
+}
+
+
+@keyframes hover { 
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-100px);
+  }
+}
+
+
+@keyframes hover { 
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* fonts */
+.extended-bold {
+  font-family: 'PPFormula', sans-serif;
+  font-weight: 700;
+}
