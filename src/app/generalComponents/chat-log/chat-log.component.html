@@ -15,9 +15,16 @@
       <div>
         {{ aiMessages[i] }}
       </div>
-      <div *ngIf="message.includes('vaardigheden')">
-        <app-vaardigheden-response [personName]="findPerson(message.toLowerCase())"></app-vaardigheden-response>
+      <div *ngIf="message.includes('vaardigheden'.toLocaleLowerCase())">
+        <ng-container *ngIf="findPerson(message.toLowerCase()) !== 'None'; else noSkillsFound">
+          <app-vaardigheden-response [personName]="findPerson(message.toLowerCase())"></app-vaardigheden-response>
+        </ng-container>
       </div>
+      <ng-template #noSkillsFound>
+        <div>Sorry, het is mij niet duidelijk van wie je de vaardigheden wilt zien. Ik heb hier de vaardigheden van Vincent!</div>
+        <app-vaardigheden-response [personName]="'Vincent'"></app-vaardigheden-response>
+
+      </ng-template>
     </div>
   </div>
 </div>
