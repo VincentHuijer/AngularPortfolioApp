@@ -15,8 +15,8 @@
       <div>
         {{ aiMessages[i] }}
       </div>
-      <div>
-        <app-vaardigheden-response/>
+      <div *ngIf="message.includes('vaardigheden')">
+        <app-vaardigheden-response [personName]="findPerson(message.toLowerCase())"></app-vaardigheden-response>
       </div>
     </div>
   </div>

@@ -10,6 +10,22 @@ import { VaardighedenResponseComponent } from '../../AIResponses/vaardigheden-re
   styleUrl: './chat-log.component.css'
 })
 export class ChatLogComponent {
+  message: string = 'vaardigheden Vincent';
+
   @Input() userMessages: string[] = [];
   @Input() aiMessages: string[] = [];
+  
+  findPerson(message: string) {
+    if (message.includes('vincent')) {
+      return 'Vincent';
+    } else if (message.includes('theon')) {
+      return 'Theon';
+    } else if (message.includes('mees')) {
+      return 'Mees';
+    } else if (message.includes('ashray')) {
+      return 'Ashray';
+    } else {
+      return 'None';
+    }
+  }
 }
