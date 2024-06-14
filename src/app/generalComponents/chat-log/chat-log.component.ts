@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { VaardighedenResponseComponent } from '../../AIResponses/vaardigheden-response/vaardigheden-response.component';
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-chat-log',

@@ -11,11 +11,12 @@ import { FooterComponent } from '../../footer/footer.component';
 import { ArrowButtonComponent } from '../../../assets/svgIcons/arrow-button/arrow-button.component';
 import { CommonModule } from '@angular/common';
 import { HtmlLogoComponent } from '../../../assets/svgIcons/html-logo/html-logo.component';
+import { HulpResponseComponent } from '../../AIResponses/hulp-response/hulp-response.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, FooterComponent, ArrowButtonComponent,HtmlLogoComponent],
+  imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, FooterComponent, ArrowButtonComponent,HtmlLogoComponent, HulpResponseComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

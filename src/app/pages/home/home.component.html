@@ -6,8 +6,9 @@
   <img #autoHovering class="shake-on-hover autoHovering absolute h-24 w-24 rotate-45" src="assets/logos/AngularLogo.png" style="left: 850px; top: 200px;">
   <img #autoHovering class="shake-on-hover autoHovering absolute w-20 hue-rotate-15" src="assets/logos/FigmaLogo.png" style="right: 100px; top: 20px;">
   <img #autoHovering class="shake-on-hover autoHovering absolute h-20 w-20 -rotate-3" src="assets/logos/PythonLogo.png" style="left: 600px; top: 5px;">
-  <!-- <img class="shake-on-hover autoHovering absolute h-20 w-20 -rotate-12" src="assets/logos/AdobeIllustratorLogo.png" style="left: 1920px; top: 800px;">Possibly cursor-pointer and onClick function -->
+  <img #autoHovering class="shake-on-hover autoHovering absolute h-20 w-20 -rotate-12" src="assets/logos/AdobeIllustratorLogo.png" style="left: 90vw; top: 800px;">
   <img class="rotater absolute h-20 w-20 rotate-6" src="assets/logos/ReactLogo.png" style="left: 1100px; top: 200px">
+  <!-- top-[200px] alternatief voor tailwind -->
   <div class="w-11/12 flex flex-col items-center">
     <div class="extended-bold self-start text-[#C6E643] font-serif" style="font-size: 200px;">AI Chat</div>
     <div class="items-center bg-[rgb(87,87,87)] w-3/6 rounded-xl p-4">
@@ -21,17 +22,17 @@
         </div>
       
         <div class="p-4 h-48 flex justify-between">
-          <div class="w-4/12 h-full bg-[#969696] flex flex-col items-center justify-center text-white rounded-xl mr-2" onclick="">
+          <div class="w-4/12 h-full bg-[#969696] flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('animatie hulp')">
             <app-angle-brackets></app-angle-brackets>
             <div class="text-2xl">animatie hulp</div>
             <div class="text-[#D3D3D3]">Hier komt een kleine text</div>
           </div>
-          <div class="w-4/12 h-full bg-[#969696] flex flex-col items-center justify-center text-white rounded-xl mr-2">
+          <div class="w-4/12 h-full bg-[#969696] flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Design hulp hulp')">
             <app-angle-brackets></app-angle-brackets>
             <div class="text-2xl">Design hulp</div>
             <div class="text-[#D3D3D3]">Hier komt een kleine text</div>
           </div>
-          <div class="w-4/12 h-full bg-[#969696] flex flex-col items-center justify-center text-white rounded-xl">
+          <div class="w-4/12 h-full bg-[#969696] flex flex-col items-center justify-center text-white rounded-xl" (click)="onMessageSent('Web / Code hulp')">
             <app-angle-brackets></app-angle-brackets>
             <div class="text-2xl">Web / Code hulp</div>
             <div class="text-[#D3D3D3]">Hier komt een kleine text</div>
