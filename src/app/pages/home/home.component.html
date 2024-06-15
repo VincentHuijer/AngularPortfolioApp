@@ -9,10 +9,10 @@
   <img #autoHovering class="shake-on-hover autoHovering absolute h-20 w-20 -rotate-12" src="assets/logos/AdobeIllustratorLogo.png" style="left: 90vw; top: 800px;">
   <img class="rotater absolute h-20 w-20 rotate-6" src="assets/logos/ReactLogo.png" style="left: 1100px; top: 200px">
   <!-- top-[200px] alternatief voor tailwind -->
-  <div  *ngIf="userMessages.length == 0; else chatContent" class="w-11/12 flex flex-col items-center">
+  <div class="w-11/12 flex flex-col items-center">
     <div class="extended-bold self-start text-[#C6E643] font-serif" style="font-size: 200px;">AI Chat</div>
     <div class="items-center bg-[rgb(87,87,87)] w-3/6 rounded-xl p-4">
-      <div>
+      <div *ngIf="userMessages.length == 0; else chatContent">
         <div class="w-5/6 mx-auto flex flex-col items-center">
           <app-asterik class="rotaterLeft" width="100" height="100"></app-asterik><!-- class="rotaterLeft"-->
           <div class="items-start">
@@ -40,52 +40,50 @@
         </div>
         <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
       </div>
-      </div>
-      </div>
-
-      <ng-template #chatContent>
-        <app-chat-log [userMessages]="userMessages" [aiMessages]="aiMessages"></app-chat-log>
-        <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
-      </ng-template>
     </div>
- 
+  </div>
 
+  <ng-template #chatContent>
+    <app-chat-log [userMessages]="userMessages" [aiMessages]="aiMessages"></app-chat-log>
+    <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
+  </ng-template>
+</div>
 
-    <div class="w-full bg-white mt-12 p-6"></div> <!-- Wit balkje -->
+<div class="w-full bg-white mt-12 p-6"></div> <!-- Wit balkje -->
 
-    <div class="relative w-full h-96 overflow-hidden"> <!-- h-96 looks better than thise huge shit-->
-      <img src="assets/fotos/Schoolmedia.png"/>
-      <div class="w-full flex items-center justify-end p-6 absolute bottom-0 right-0">
-        <div class="bg-white p-4 rounded-xl flex flex-row">
-          <p class="font-bold text-center content-center mr-4 underline cursor-pointer text-2xl">Bekijk portfolio's</p>
-          <app-arrow-button/>
-        </div>
-      </div>
+<div class="relative w-full h-96 overflow-hidden"> <!-- h-96 looks better than thise huge shit-->
+  <img src="assets/fotos/Schoolmedia.png"/>
+  <div class="w-full flex items-center justify-end p-6 absolute bottom-0 right-0">
+    <div class="bg-white p-4 rounded-xl flex flex-row">
+      <p class="font-bold text-center content-center mr-4 underline cursor-pointer text-2xl">Bekijk portfolio's</p>
+      <app-arrow-button/>
     </div>
+  </div>
+</div>
 
 
-    <div class="w-full bg-white p-6">
-      <div class="p-4 flex justify-evenly">
-        <div class="flex flex-col items-center justify-center text-white rounded-xl mr-2">
-          <div class="text-[#C6E643] text-8xl">AI Chat</div>
-        </div>
-        <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-          <div class="text-[#072807] text-2xl">Portfolio's</div>
-          <div class="text-[#B9B9B9]">Theon</div>
-          <div class="text-[#B9B9B9]">Ashray</div>
-          <div class="text-[#B9B9B9]">Vincent</div>
-          <div class="text-[#B9B9B9]">Mees</div>
-        </div>
-        <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-          <div class="text-[#072807] text-2xl">Over ons</div>
-          <div class="text-[#B9B9B9]">Over ons</div>
-          <div class="text-[#B9B9B9] underline">Onze school</div>
-        </div>
-        <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-          <div class="text-[#072807] text-2xl">Reverenties</div>
-          <div class="text-[#B9B9B9]">ChatGPT</div>
-          <div class="text-[#B9B9B9]">De Haagse Hogeschool</div>
-        </div>       
-      </div>
+<div class="w-full bg-white p-6">
+  <div class="p-4 flex justify-evenly">
+    <div class="flex flex-col items-center justify-center text-white rounded-xl mr-2">
+      <div class="text-[#C6E643] text-8xl">AI Chat</div>
     </div>
+    <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+      <div class="text-[#072807] text-2xl">Portfolio's</div>
+      <div class="text-[#B9B9B9]">Theon</div>
+      <div class="text-[#B9B9B9]">Ashray</div>
+      <div class="text-[#B9B9B9]">Vincent</div>
+      <div class="text-[#B9B9B9]">Mees</div>
+    </div>
+    <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+      <div class="text-[#072807] text-2xl">Over ons</div>
+      <div class="text-[#B9B9B9]">Over ons</div>
+      <div class="text-[#B9B9B9] underline">Onze school</div>
+    </div>
+    <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+      <div class="text-[#072807] text-2xl">Reverenties</div>
+      <div class="text-[#B9B9B9]">ChatGPT</div>
+      <div class="text-[#B9B9B9]">De Haagse Hogeschool</div>
+    </div>       
+  </div>
+</div>
 
