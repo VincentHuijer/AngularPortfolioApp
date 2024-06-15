@@ -1,5 +1,4 @@
 <div class="flex flex-row bg-white rounded-xl mb-5 items-center mx-4 justify-between">
-  <div class="flex items-center"> <!-- Container for asterisk and input -->
     <app-asterik width="34" height="38" color="black" class="ml-4"></app-asterik>
     <input 
       type="text"
@@ -7,9 +6,8 @@
       (keyup.enter)="sendMessage()" 
       placeholder="Type hier jouw vraag" 
       style="outline: none;"
-      class="text-2xl ml-2"
+      class="text-xl ml-2 flex-1"
     />
-  </div>
   <div>
     <app-arrow-button (click)="sendMessage()"/>
   </div> 
