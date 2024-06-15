@@ -12,7 +12,7 @@
       <div class="text-[#C6E643] font-bold">
         AI Chat
       </div>
-      <div>
+      <div #textContainer>
         {{ aiMessages[i] }}
       </div>
       <div *ngIf="message.includes('vaardigheden'.toLocaleLowerCase())">

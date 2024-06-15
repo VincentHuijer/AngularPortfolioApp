@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { VaardighedenResponseComponent } from '../../AIResponses/vaardigheden-response/vaardigheden-response.component';
 import { gsap } from 'gsap';
+
 
 @Component({
   selector: 'app-chat-log',
@@ -10,12 +11,13 @@ import { gsap } from 'gsap';
   templateUrl: './chat-log.component.html',
   styleUrl: './chat-log.component.css'
 })
-export class ChatLogComponent {
+export class ChatLogComponent implements OnChanges, AfterViewInit {
   message: string = 'vaardigheden Vincent';
 
   @Input() userMessages: string[] = [];
   @Input() aiMessages: string[] = [];
-  
+  @ViewChild('textContainer') textContainer!: ElementRef;
+
   findPerson(message: string) {
     if (message.includes('vincent')) {
       return 'Vincent';
@@ -28,5 +30,36 @@ export class ChatLogComponent {
     } else {
       return 'None';
     }
+  }
+
+  ngAfterViewInit() {
+    if (this.aiMessages.length > 0) {
+      this.animateText(this.aiMessages[this.aiMessages.length - 1]);
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['aiMessages'] && !changes['aiMessages'].firstChange) {
+      this.animateText(this.aiMessages[this.aiMessages.length - 1]);
+    }
+  }
+
+  private animateText(message: string) {
+    const textContainer = this.textContainer.nativeElement;
+    textContainer.innerHTML = '';
+
+    message.split('').forEach((char, index) => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      textContainer.appendChild(span);
+    });
+
+    gsap.from(textContainer.children, {
+      opacity: 0,
+      y: 50,
+      duration: 0.05,
+      stagger: 0.05,
+      ease: 'power2.out'
+    });
   }
 }
