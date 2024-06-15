@@ -40,50 +40,52 @@
         </div>
         <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
       </div>
+
+
+      <ng-template #chatContent>
+        <app-chat-log [userMessages]="userMessages" [aiMessages]="aiMessages"></app-chat-log>
+        <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
+      </ng-template>
+    </div>
+ 
+
+
+    <div class="w-full bg-white mt-12 p-6"></div> <!-- Wit balkje -->
+
+    <div class="relative w-full h-96 overflow-hidden"> <!-- h-96 looks better than thise huge shit-->
+      <img src="assets/fotos/Schoolmedia.png"/>
+      <div class="w-full flex items-center justify-end p-6 absolute bottom-0 right-0">
+        <div class="bg-white p-4 rounded-xl flex flex-row">
+          <p class="font-bold text-center content-center mr-4 underline cursor-pointer text-2xl">Bekijk portfolio's</p>
+          <app-arrow-button/>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w-full bg-white p-6">
+      <div class="p-4 flex justify-evenly">
+        <div class="flex flex-col items-center justify-center text-white rounded-xl mr-2">
+          <div class="text-[#C6E643] text-8xl">AI Chat</div>
+        </div>
+        <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+          <div class="text-[#072807] text-2xl">Portfolio's</div>
+          <div class="text-[#B9B9B9]">Theon</div>
+          <div class="text-[#B9B9B9]">Ashray</div>
+          <div class="text-[#B9B9B9]">Vincent</div>
+          <div class="text-[#B9B9B9]">Mees</div>
+        </div>
+        <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+          <div class="text-[#072807] text-2xl">Over ons</div>
+          <div class="text-[#B9B9B9]">Over ons</div>
+          <div class="text-[#B9B9B9] underline">Onze school</div>
+        </div>
+        <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+          <div class="text-[#072807] text-2xl">Reverenties</div>
+          <div class="text-[#B9B9B9]">ChatGPT</div>
+          <div class="text-[#B9B9B9]">De Haagse Hogeschool</div>
+        </div>       
+      </div>
     </div>
   </div>
-
-  <ng-template #chatContent>
-    <app-chat-log [userMessages]="userMessages" [aiMessages]="aiMessages"></app-chat-log>
-    <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
-  </ng-template>
 </div>
-
-<div class="w-full bg-white mt-12 p-6"></div> <!-- Wit balkje -->
-
-<div class="relative w-full h-96 overflow-hidden"> <!-- h-96 looks better than thise huge shit-->
-  <img src="assets/fotos/Schoolmedia.png"/>
-  <div class="w-full flex items-center justify-end p-6 absolute bottom-0 right-0">
-    <div class="bg-white p-4 rounded-xl flex flex-row">
-      <p class="font-bold text-center content-center mr-4 underline cursor-pointer text-2xl">Bekijk portfolio's</p>
-      <app-arrow-button/>
-    </div>
-  </div>
-</div>
-
-
-<div class="w-full bg-white p-6">
-  <div class="p-4 flex justify-evenly">
-    <div class="flex flex-col items-center justify-center text-white rounded-xl mr-2">
-      <div class="text-[#C6E643] text-8xl">AI Chat</div>
-    </div>
-    <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-      <div class="text-[#072807] text-2xl">Portfolio's</div>
-      <div class="text-[#B9B9B9]">Theon</div>
-      <div class="text-[#B9B9B9]">Ashray</div>
-      <div class="text-[#B9B9B9]">Vincent</div>
-      <div class="text-[#B9B9B9]">Mees</div>
-    </div>
-    <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-      <div class="text-[#072807] text-2xl">Over ons</div>
-      <div class="text-[#B9B9B9]">Over ons</div>
-      <div class="text-[#B9B9B9] underline">Onze school</div>
-    </div>
-    <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-      <div class="text-[#072807] text-2xl">Reverenties</div>
-      <div class="text-[#B9B9B9]">ChatGPT</div>
-      <div class="text-[#B9B9B9]">De Haagse Hogeschool</div>
-    </div>       
-  </div>
-</div>
-
