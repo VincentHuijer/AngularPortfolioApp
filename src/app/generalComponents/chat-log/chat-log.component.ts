@@ -56,7 +56,6 @@ export class ChatLogComponent implements OnChanges, AfterViewInit {
 
     gsap.from(textContainer.children, {
       opacity: 0,
-      y: 50,
       duration: 0.05,
       stagger: 0.05,
       ease: 'power2.out'
