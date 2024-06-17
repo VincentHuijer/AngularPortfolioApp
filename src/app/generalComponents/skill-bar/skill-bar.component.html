@@ -1,0 +1,8 @@
+<div class="text-center text-[#D3D3D3]">{{ name }}</div>
+<div class="flex flex-row items-center">
+  <img [src]="'assets/logos/' + logo" class="h-6 w-6">
+  <div class="relative h-4 w-64 bg-gray-500 rounded-lg overflow-hidden mx-auto">
+    <div class="absolute left-0 h-full bg-blue-500 transform origin-left" [style.width]="percentage + '%'"></div>
+  </div>
+  <div class="text-center text-[#D3D3D3]">{{ percentage }}%</div>
+</div>
