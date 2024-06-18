@@ -28,7 +28,7 @@ import { BurgerMenuComponent } from '../../../assets/svgIcons/burger-menu/burger
   styleUrl: './home.component.css',
 })
 
-export class HomeComponent implements AfterViewInit, ElementRef {
+export class HomeComponent implements AfterViewInit {
   @ViewChildren('autoHovering') hoverElements!: QueryList<ElementRef>;
 
   constructor(private renderer: Renderer2) {}
@@ -73,16 +73,5 @@ export class HomeComponent implements AfterViewInit, ElementRef {
         delay: Math.random() * 2//random time inbetween each animation
       });
     });
-  }
-
-  animateInOut() {
-    // Fade out the *ngIf content
-    gsap.to(this.elementRef.nativeElement.querySelector('.fade-out-element'), { opacity: 0, duration: 0.5, onComplete: () => {
-      // Hide the element after fading out
-      this.elementRef.nativeElement.querySelector('.fade-out-element').style.display = 'none';
-      
-      // Fade in the content inside the ng-template
-      gsap.fromTo(this.chatContent.nativeElement, { opacity: 0 }, { opacity: 1, duration: 0.5 });
-    }});
   }
 }
