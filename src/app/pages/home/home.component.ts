@@ -15,10 +15,12 @@ import { HulpResponseComponent } from '../../AIResponses/hulp-response/hulp-resp
 import { DesignPencilComponent } from '../../../assets/svgIcons/design-pencil/design-pencil.component';
 import { AnimationDrawingComponent } from '../../../assets/svgIcons/animation-drawing/animation-drawing.component';
 import { gsap } from 'gsap/gsap-core';
+import { GlaringBallComponentTry3Squeeking } from '../../animatedCSSComponents/movingBallProgress/glaringBallProgress/glaring-ball-try3-squeeking/glaring-ball-try3-squeeking.component';
+import { GlaringBall4Component } from '../../animatedCSSComponents/movingBallProgress/glaringBallProgress/glaring-ball4/glaring-ball4.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, DesignPencilComponent, AnimationDrawingComponent, FooterComponent, ArrowButtonComponent,HtmlLogoComponent, HulpResponseComponent],
+  imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, DesignPencilComponent, AnimationDrawingComponent, FooterComponent, ArrowButtonComponent,HtmlLogoComponent, HulpResponseComponent, GlaringBall4Component],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
