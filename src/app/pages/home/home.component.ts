@@ -14,7 +14,7 @@ import { HtmlLogoComponent } from '../../../assets/svgIcons/html-logo/html-logo.
 import { HulpResponseComponent } from '../../AIResponses/hulp-response/hulp-response.component';
 import { DesignPencilComponent } from '../../../assets/svgIcons/design-pencil/design-pencil.component';
 import { AnimationDrawingComponent } from '../../../assets/svgIcons/animation-drawing/animation-drawing.component';
-
+import { gsap } from 'gsap/gsap-core';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -52,6 +52,21 @@ export class HomeComponent implements AfterViewInit {
     this.hoverElements.forEach((element: ElementRef) => {
       const randomDuration = (Math.random() * 6 + 2).toFixed(6); // Generates a random duration between 2s and 4s
       this.renderer.setStyle(element.nativeElement, 'animation-duration', `${randomDuration}s`);
+    });
+
+    const icons = document.querySelectorAll(".falling");
+
+    icons.forEach(icon => {
+      gsap.set(icon, { y: -100, opacity: 1 });
+
+      gsap.to(icon, {
+        y: window.innerHeight + 100, 
+        opacity: 0,
+        duration: 3,
+        ease: "power1.inOut",
+        repeat: -1, 
+        delay: Math.random() * 2//random time inbetween each animation
+      });
     });
   }
 }
