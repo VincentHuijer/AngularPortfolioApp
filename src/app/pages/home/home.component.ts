@@ -28,16 +28,16 @@ import { BurgerMenuComponent } from '../../../assets/svgIcons/burger-menu/burger
   styleUrl: './home.component.css',
 })
 
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit, ElementRef {
   @ViewChildren('autoHovering') hoverElements!: QueryList<ElementRef>;
 
   constructor(private renderer: Renderer2) {}
 
-  userMessages: string[] = [];
-  aiMessages: string[] = [];
+  // userMessages: string[] = [];
+  // aiMessages: string[] = [];
 
-  // userMessages: string[] = ['Toon mij  de vaardigheden van Theon','Wow, indrukwekkend! Zou ik wat van zijn werk kunnen zien?', 'test3'];
-  // aiMessages: string[] = ['response1', 'Tuurlijk! Meer over Theon zijn werk is te vinden op zijn portfolio hier!', 'response3'];
+  userMessages: string[] = ['Toon mij  de vaardigheden van Theon','Wow, indrukwekkend! Zou ik wat van zijn werk kunnen zien?', 'test3'];
+  aiMessages: string[] = ['response1', 'Tuurlijk! Meer over Theon zijn werk is te vinden op zijn portfolio hier!', 'response3'];
 
   onMessageSent(message: string) {
     console.log('userMessages before the message was received:', this.userMessages)
@@ -73,5 +73,16 @@ export class HomeComponent implements AfterViewInit {
         delay: Math.random() * 2//random time inbetween each animation
       });
     });
+  }
+
+  animateInOut() {
+    // Fade out the *ngIf content
+    gsap.to(this.elementRef.nativeElement.querySelector('.fade-out-element'), { opacity: 0, duration: 0.5, onComplete: () => {
+      // Hide the element after fading out
+      this.elementRef.nativeElement.querySelector('.fade-out-element').style.display = 'none';
+      
+      // Fade in the content inside the ng-template
+      gsap.fromTo(this.chatContent.nativeElement, { opacity: 0 }, { opacity: 1, duration: 0.5 });
+    }});
   }
 }

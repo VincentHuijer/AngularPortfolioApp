@@ -116,11 +116,8 @@
         </div>
       </div>
       <div class="w-8/12">
-        <div>
-
           <app-chat-log [userMessages]="userMessages" [aiMessages]="aiMessages"></app-chat-log>
           <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
-        </div>
       </div>
       <div class="w-2/12">
         <app-burger-menu/>
