@@ -20,10 +20,11 @@ import { GlaringBall4Component } from '../../animatedCSSComponents/movingBallPro
 import { AsterikDarkComponent } from '../../../assets/svgIcons/asterik-dark/asterik-dark.component';
 import { ChatBubbleComponent } from '../../../assets/svgIcons/chat-bubble/chat-bubble.component';
 import { BurgerMenuComponent } from '../../../assets/svgIcons/burger-menu/burger-menu.component';
+import { HoverButtonComponent } from '../../generalComponents/hover-button/hover-button.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, DesignPencilComponent, AnimationDrawingComponent, FooterComponent, ArrowButtonComponent,HtmlLogoComponent, HulpResponseComponent, GlaringBall4Component, AsterikDarkComponent, ChatBubbleComponent, BurgerMenuComponent],
+  imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, DesignPencilComponent, AnimationDrawingComponent, FooterComponent, ArrowButtonComponent,HtmlLogoComponent, HulpResponseComponent, GlaringBall4Component, AsterikDarkComponent, ChatBubbleComponent, BurgerMenuComponent, HoverButtonComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

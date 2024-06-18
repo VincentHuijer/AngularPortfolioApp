@@ -80,7 +80,7 @@
     <div class="flex flex-row my-10">
       <div class="w-4/12 bg-[#353535] mr-10 flex flex-col rounded-xl border-white h-full">
         <div class="flex flex-row items-center text-white p-4">
-          <app-asterik-dark class="mr-4"/>
+          <app-glaring-ball4 class="mr-4"/>
             AI Match
         </div>
         <div class="flex flex-row justify-evenly">
@@ -111,13 +111,13 @@
             <app-chat-bubble class="p-4"/> Hoe werkt deze chat
           </div>
         </div>
-        <div class="mt-auto p-4 text-black justify-center bg-[#C6E643] m-4 rounded-lg text-center">
-          Nieuwe chat
+        <div class="flex justify-center">
+          <app-hover-button text="Nieuwe chat" class="mt-auto justify-center m-4 text-black" defaultColor="#C6E643" hoverColor="#10B981" height="50px" />
         </div>
       </div>
       <div class="w-8/12">
-          <app-chat-log [userMessages]="userMessages" [aiMessages]="aiMessages"></app-chat-log>
-          <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
+        <app-chat-log [userMessages]="userMessages" [aiMessages]="aiMessages"></app-chat-log>
+        <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
       </div>
       <div class="w-2/12">
         <app-burger-menu/>
