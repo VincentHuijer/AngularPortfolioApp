@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<div class="h-full bg-[#1F1F1F] flex items-center justify-center relative">
+<div *ngIf="userMessages.length == 0; else chatContent" class="h-full bg-[#1F1F1F] flex items-center justify-center relative">
   <img #autoHovering class="falling absolute top-[1px] right-[550px] h-20 w-20 rotate-6" src="assets/logos/VueLogo.png">
   <img #autoHovering class="falling absolute top-[1px] right-[450px] h-20 w-20 rotate-6" src="assets/logos/VueLogo.png">
   <img #autoHovering class="falling absolute top-[3px] right-[650px] h-20 w-20 rotate-6" src="assets/logos/VueLogo.png">
@@ -39,10 +39,10 @@
   <img #autoHovering class="shake-on-hover autoHovering absolute h-20 w-20 -rotate-12" src="assets/logos/AdobeIllustratorLogo.png" style="left: 90vw; top: 800px;">
   <img class="rotater absolute h-20 w-20 rotate-6" src="assets/logos/ReactLogo.png" style="left: 1100px; top: 200px">
   <!-- top-[200px] alternatief voor tailwind -->
-  <div class="w-11/12 flex flex-col items-center">
+  <div   class="w-11/12 flex flex-col items-center">
     <div class="extended-bold self-start text-[#C6E643] font-serif" style="font-size: 200px;">AI Chat</div>
     <div class="items-center bg-[rgb(87,87,87)] w-3/6 rounded-xl p-4">
-      <div *ngIf="userMessages.length == 0; else chatContent">
+      <div>
         <div class="w-5/6 mx-auto flex flex-col items-center">
           <app-glaring-ball4/>
           <!-- <app-asterik class="rotaterLeft" width="100" height="100"></app-asterik> -->
@@ -71,52 +71,99 @@
         </div>
         <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
       </div>
-
-
-      <ng-template #chatContent>
-        <app-chat-log [userMessages]="userMessages" [aiMessages]="aiMessages"></app-chat-log>
-        <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
-      </ng-template>
     </div>
- 
+  </div>
+</div>
 
-
-    <div class="w-full bg-white mt-12 p-6"></div> <!-- Wit balkje -->
-
-    <div class="relative w-full h-96 overflow-hidden">
-      <img src="assets/fotos/Schoolmedia.png"/>
-      <div class="w-full flex items-center justify-end p-6 absolute bottom-0 right-0">
-        <div class="bg-white p-4 rounded-xl flex flex-row">
-          <p class="font-bold text-center content-center mr-4 underline cursor-pointer text-2xl">Bekijk portfolio's</p>
-          <app-arrow-button/>
+<ng-template #chatContent>
+  <div class="bg-[#1F1F1F] flex items-center justify-center relative">
+    <div class="flex flex-row my-10">
+      <div class="w-4/12 bg-[#353535] mr-10 flex flex-col rounded-xl border-white h-full">
+        <div class="flex flex-row items-center text-white p-4">
+          <app-asterik-dark class="mr-4"/>
+            AI Match
+        </div>
+        <div class="flex flex-row justify-evenly">
+          <div class="text-[#A8A8A8]">
+            Jouw chats
+          </div>
+          <div class="text-[#C6E643]">
+            Verwijder chats
+          </div>
+        </div>
+        <div class="border-b border-[#B9B9B9] m-4">
+          <div class="text-[#A8A8A8] flex flex-row items-center">
+            <app-chat-bubble class="p-4"/> Hoe werkt deze chat
+          </div>
+          <div class="text-[#A8A8A8] flex flex-row items-center">
+            <app-chat-bubble class="p-4"/> Hoe werkt deze chat
+          </div>
+          <div class="text-[#A8A8A8] flex flex-row items-center">
+            <app-chat-bubble class="p-4"/> Hoe werkt deze chat
+          </div>
+          <div class="text-[#A8A8A8] flex flex-row items-center">
+            <app-chat-bubble class="p-4"/> Hoe werkt deze chat
+          </div>
+          <div class="text-[#A8A8A8] flex flex-row items-center">
+            <app-chat-bubble class="p-4"/> Hoe werkt deze chat
+          </div>
+          <div class="text-[#A8A8A8] flex flex-row items-center">
+            <app-chat-bubble class="p-4"/> Hoe werkt deze chat
+          </div>
+        </div>
+        <div class="mt-auto p-4 text-black justify-center bg-[#C6E643] m-4 rounded-lg text-center">
+          Nieuwe chat
         </div>
       </div>
-    </div>
+      <div class="w-8/12">
+        <div>
 
-
-    <div class="w-full bg-white p-6">
-      <div class="p-4 flex justify-evenly">
-        <div class="flex flex-col items-center justify-center text-white rounded-xl mr-2">
-          <div class="text-[#C6E643] text-8xl">AI Chat</div>
+          <app-chat-log [userMessages]="userMessages" [aiMessages]="aiMessages"></app-chat-log>
+          <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
         </div>
-        <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-          <div class="text-[#072807] text-2xl">Portfolio's</div>
-          <div class="text-[#B9B9B9]">Theon</div>
-          <div class="text-[#B9B9B9]">Ashray</div>
-          <div class="text-[#B9B9B9]">Vincent</div>
-          <div class="text-[#B9B9B9]">Mees</div>
-        </div>
-        <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-          <div class="text-[#072807] text-2xl">Over ons</div>
-          <div class="text-[#B9B9B9]">Over ons</div>
-          <div class="text-[#B9B9B9] underline">Onze school</div>
-        </div>
-        <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-          <div class="text-[#072807] text-2xl">Reverenties</div>
-          <div class="text-[#B9B9B9]">ChatGPT</div>
-          <div class="text-[#B9B9B9]">De Haagse Hogeschool</div>
-        </div>       
+      </div>
+      <div class="w-2/12">
+        <app-burger-menu/>
       </div>
     </div>
   </div>
+</ng-template>
+ 
+
+
+<div class="w-full bg-white mt-12 p-6"></div> <!-- Wit balkje -->
+
+<div class="relative w-full h-96 overflow-hidden">
+<img src="assets/fotos/Schoolmedia.png"/>
+<div class="w-full flex items-center justify-end p-6 absolute bottom-0 right-0">
+  <div class="bg-white p-4 rounded-xl flex flex-row">
+    <p class="font-bold text-center content-center mr-4 underline cursor-pointer text-2xl">Bekijk portfolio's</p>
+    <app-arrow-button/>
+  </div>
+</div>
+</div>
+
+
+<div class="w-full bg-white p-6">
+<div class="p-4 flex justify-evenly">
+  <div class="flex flex-col items-center justify-center text-white rounded-xl mr-2">
+    <div class="text-[#C6E643] text-8xl">AI Chat</div>
+  </div>
+  <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+    <div class="text-[#072807] text-2xl">Portfolio's</div>
+    <div class="text-[#B9B9B9]">Theon</div>
+    <div class="text-[#B9B9B9]">Ashray</div>
+    <div class="text-[#B9B9B9]">Vincent</div>
+    <div class="text-[#B9B9B9]">Mees</div>
+  </div>
+  <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+    <div class="text-[#072807] text-2xl">Over ons</div>
+    <div class="text-[#B9B9B9]">Over ons</div>
+    <div class="text-[#B9B9B9] underline">Onze school</div>
+  </div>
+  <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+    <div class="text-[#072807] text-2xl">Reverenties</div>
+    <div class="text-[#B9B9B9]">ChatGPT</div>
+    <div class="text-[#B9B9B9]">De Haagse Hogeschool</div>
+  </div>       
 </div>

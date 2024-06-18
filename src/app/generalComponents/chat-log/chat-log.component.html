@@ -1,24 +1,27 @@
 <div *ngIf="userMessages.length > 0 || aiMessages.length > 0">
   <div *ngFor="let message of userMessages; let i = index">
-    <div class="bg-gray-300 p-4 rounded-lg max-w self-start mb-2">
-      <div class="text-[#969696]">
-        Jij
-      </div>
-      <div class="text-[#969696]">
-        {{ message }}
+    <div class="flex justify-end mb-2" *ngIf="message">
+      <div class="bg-gray-300 p-4 rounded-lg max-w self-end">
+        <div class="text-[#969696] text-right">
+          Jij
+        </div>
+        <div class="text-[#969696]">
+          {{ message }}
+        </div>
       </div>
     </div>
-    <div *ngIf="aiMessages[i]" class="bg-slate-300 p-4 rounded-lg max-w self-end mb-2">
-      <div class="text-[#C6E643] font-bold">
-        AI Chat
-      </div>
-      <div #textContainer>
-        {{ aiMessages[i] }}
-      </div>
-      <div *ngIf="message.includes('vaardigheden'.toLocaleLowerCase())">
-        <ng-container *ngIf="findPerson(message.toLowerCase()) !== 'None'; else noSkillsFound">
-          <app-vaardigheden-response [personName]="findPerson(message.toLowerCase())"></app-vaardigheden-response>
-        </ng-container>
+    <div *ngIf="aiMessages[i]" class="flex justify-start mb-2">
+      <div class="bg-slate-300 p-4 rounded-lg max-w self-start">
+        <div class="text-[#C6E643] font-bold">
+          AI Chat
+        </div>
+        <div #textContainer>
+          {{ aiMessages[i] }}
+        </div>
+        <div *ngIf="message.includes('vaardigheden'.toLocaleLowerCase())">
+          <ng-container *ngIf="findPerson(message.toLowerCase()) !== 'None'; else noSkillsFound">
+            <app-vaardigheden-response [personName]="findPerson(message.toLowerCase())"></app-vaardigheden-response>
+          </ng-container>
       </div>
       <ng-template #noSkillsFound>
         <div>Sorry, het is mij niet duidelijk van wie je de vaardigheden wilt zien. Ik heb hier de vaardigheden van Vincent!</div>

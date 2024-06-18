@@ -17,10 +17,13 @@ import { AnimationDrawingComponent } from '../../../assets/svgIcons/animation-dr
 import { gsap } from 'gsap/gsap-core';
 import { GlaringBallComponentTry3Squeeking } from '../../animatedCSSComponents/movingBallProgress/glaringBallProgress/glaring-ball-try3-squeeking/glaring-ball-try3-squeeking.component';
 import { GlaringBall4Component } from '../../animatedCSSComponents/movingBallProgress/glaringBallProgress/glaring-ball4/glaring-ball4.component';
+import { AsterikDarkComponent } from '../../../assets/svgIcons/asterik-dark/asterik-dark.component';
+import { ChatBubbleComponent } from '../../../assets/svgIcons/chat-bubble/chat-bubble.component';
+import { BurgerMenuComponent } from '../../../assets/svgIcons/burger-menu/burger-menu.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, DesignPencilComponent, AnimationDrawingComponent, FooterComponent, ArrowButtonComponent,HtmlLogoComponent, HulpResponseComponent, GlaringBall4Component],
+  imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, DesignPencilComponent, AnimationDrawingComponent, FooterComponent, ArrowButtonComponent,HtmlLogoComponent, HulpResponseComponent, GlaringBall4Component, AsterikDarkComponent, ChatBubbleComponent, BurgerMenuComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
