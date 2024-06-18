@@ -1,1 +1,134 @@
-<p>theon-portfolio works!</p>
+<!DOCTYPE html>
+<div class="h-screen bg-black flex">
+  <div class="flex-1 bg-white rounded-xl flex my-6 mx-4">
+    <!-- why does justify center not do what I want it to -->
+    <div class="flex flex-row">
+      <app-asterik-dark class="p-4"/>
+      <div class="flex flex-col w-6/12">
+        <div class="extended-bold self-start text-black font-serif text-5xl pt-4 mb-6">AI Chat</div>
+        <div class="">
+          <div class="text-5xl"> Portfolio van Theon</div>
+
+          <div>
+            <div class="border-2 border-[#C6E643] rounded-full p-4 bg-[#F8FFDB] text-center">
+              Branding
+            </div>
+            <div class="text-[#969696]"> Met een branding zal je merk zich onderscheiden van de massa door ervaring in onderzoek doen en het werken in programma’s zoals ai weet ik wat u merk nodig heeft </div>
+            <div>
+              <app-skill-bar 
+                name="Adobe Illustrator" 
+                logo="AdobeIllustratorLogo.png" 
+                [percentage]="80">
+              </app-skill-bar>
+              <app-skill-bar 
+                name="AdobeXd" 
+                logo="AdobeXdLogo.png" 
+                [percentage]="65">
+              </app-skill-bar>      
+            </div>
+          </div>
+          <div>
+            <div class="border-2 border-[#E756FF] rounded-full p-4 bg-[#F9D7FF] text-center">
+              Development
+            </div>
+            <div class="text-[#969696]"> het ontwikkelen van een website wordt gedaan in het programma webflow </div>
+            <div>
+              <app-skill-bar 
+                name="Adobe Illustrator" 
+                logo="AdobeIllustratorLogo.png" 
+                [percentage]="80">
+              </app-skill-bar>
+              <app-skill-bar 
+                name="AdobeXd" 
+                logo="AdobeXdLogo.png" 
+                [percentage]="65">
+              </app-skill-bar>      
+            </div>
+          </div>
+          <div>
+            <div class="border-2 border-[#5685FF] rounded-full p-4 bg-[#E5ECFF] text-center">
+              UX - UI
+            </div>
+            <div class="text-[#969696]"> Door opgedane kennis weet ik hoe ik als ux - ui designer tot een goed web-design moet komen die gebruiksvriendelijk voor de gebruiker is </div>
+            <div>
+              <app-skill-bar 
+                name="Adobe Illustrator" 
+                logo="AdobeIllustratorLogo.png" 
+                [percentage]="80">
+              </app-skill-bar>
+              <app-skill-bar 
+                name="AdobeXd" 
+                logo="AdobeXdLogo.png" 
+                [percentage]="65">
+              </app-skill-bar>      
+            </div>
+          </div>
+        </div>
+      </div>  
+
+
+      <div class="w-6/12 h-full overflow-hidden">
+        <div class="p-8 flex flex-col h-full">
+          <div class="relative w-full overflow-hidden">
+            <img class="rounded-3xl mb-4 h-60%" src="assets/fotos/HubbsFoto.png" alt="Hubbs Foto">
+            
+            <div class="w-full flex items-center p-6 absolute top-0 justify-end left-0">
+              <div class="flex flex-col p-3 bg-[#F2F2F2] rounded-xl mr-4">
+                <div class="p-4">
+                  Tools
+                </div>
+                <div class="flex flex-row">
+                  <div class="border-2 border-[##DFDFDF] rounded-full p-4  text-center">
+                    Adobe xd
+                  </div>
+                  <div class="border-2 border-[##DFDFDF] rounded-full p-4 text-center">
+                    Illustrator
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col p-3 bg-[#F2F2F2] rounded-xl">
+                <div class="flex flex-row">
+                  <div class="border-2 border-[#C6E643] rounded-full p-4 bg-[#F8FFDB] text-center">
+                    Branding
+                  </div>
+                  <div class="border-2 border-[#5685FF] rounded-full p-4 bg-[#E5ECFF] text-center">
+                    UX - UI
+                  </div>
+                </div>
+                <div class="border-2 border-[#E756FF] rounded-full p-4 bg-[#F9D7FF] text-center">
+                  Development
+                </div>
+              </div>
+            </div>
+            <div class="w-full flex items-center p-6 absolute bottom-4 right-0">
+              <div class="flex flex-row">
+                <a href="Hubbs.nl" class="text-5xl text-white">Hubbs.nl</a>
+                <app-link-arrow/>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row">
+            <div class="relative w-full overflow-hidden mb-4">
+              <img class="rounded-3xl mr-4" src="assets/fotos/PoloFoto.png" alt="Polo Foto">
+              <div class="w-full flex items-center p-6 absolute bottom-0 right-0">
+                <div class="flex flex-row">
+                  <a href="wattopjedak.nl" class="text-4xl text-white">Wattopjedak.nl</a>
+                  <app-link-arrow/>
+                </div>
+              </div>
+            </div>
+            <div class="relative w-full overflow-hidden mb-4">
+              <img class="rounded-3xl ml-2" src="assets/fotos/DunkinFoto.png" alt="Dunkin Foto">
+              <div class="w-full flex items-center p-6 absolute bottom-0 right-0">
+                <div class="flex flex-row">
+                  <a href="wattopjedak.nl" class="text-4xl text-white">Wattopjedak.nl</a>
+                  <app-link-arrow/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+</div>
