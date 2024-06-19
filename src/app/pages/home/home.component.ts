@@ -21,10 +21,14 @@ import { AsterikDarkComponent } from '../../../assets/svgIcons/asterik-dark/aste
 import { ChatBubbleComponent } from '../../../assets/svgIcons/chat-bubble/chat-bubble.component';
 import { BurgerMenuComponent } from '../../../assets/svgIcons/burger-menu/burger-menu.component';
 import { HoverButtonComponent } from '../../generalComponents/hover-button/hover-button.component';
+import { hoveringAdvancedButton } from '../../generalComponents/hovering-advanced-button/hovering-advanced-button.component';
+import { CodeButtonComponent } from '../../generalComponents/code-button/code-button.component';
+import { DesignButtonComponent } from '../../generalComponents/design-button/design-button.component';
+import { AnimatieButtonComponent } from '../../generalComponents/animatie-button/animatie-button.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, DesignPencilComponent, AnimationDrawingComponent, FooterComponent, ArrowButtonComponent,HtmlLogoComponent, HulpResponseComponent, GlaringBall4Component, AsterikDarkComponent, ChatBubbleComponent, BurgerMenuComponent, HoverButtonComponent],
+  imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, DesignPencilComponent, AnimationDrawingComponent, FooterComponent, ArrowButtonComponent,HtmlLogoComponent, HulpResponseComponent, GlaringBall4Component, AsterikDarkComponent, ChatBubbleComponent, BurgerMenuComponent, HoverButtonComponent, hoveringAdvancedButton, CodeButtonComponent, DesignButtonComponent, AnimatieButtonComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
@@ -34,11 +38,11 @@ export class HomeComponent implements AfterViewInit {
 
   constructor(private renderer: Renderer2) {}
 
-  // userMessages: string[] = [];
-  // aiMessages: string[] = [];
+  userMessages: string[] = [];
+  aiMessages: string[] = [];
 
-  userMessages: string[] = ['Toon mij  de vaardigheden van Theon','Wow, indrukwekkend! Zou ik wat van zijn werk kunnen zien?', 'test3'];
-  aiMessages: string[] = ['response1', 'Tuurlijk! Meer over Theon zijn werk is te vinden op zijn portfolio hier!', 'response3'];
+  // userMessages: string[] = ['Toon mij  de vaardigheden van Theon','Wow, indrukwekkend! Zou ik wat van zijn werk kunnen zien?', 'test3'];
+  // aiMessages: string[] = ['response1', 'Tuurlijk! Meer over Theon zijn werk is te vinden op zijn portfolio hier!', 'response3'];
 
   onMessageSent(message: string) {
     console.log('userMessages before the message was received:', this.userMessages)
@@ -74,5 +78,9 @@ export class HomeComponent implements AfterViewInit {
         delay: Math.random() * 2//random time inbetween each animation
       });
     });
+
+    
+
+    
   }
 }
