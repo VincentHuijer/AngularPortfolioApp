@@ -68,3 +68,32 @@ img.shake-on-hover:hover {
   font-family: 'PPFormula', sans-serif;
   font-weight: 700;
 }
+
+
+
+
+.movex-on-hover:hover {
+  animation: shakeX 0.5s linear;
+}
+
+@keyframes shakeX {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+
+.spin-on-hover {
+  transition: transform 0.3s ease; /* Add smooth transition */
+}
+
+.spin-on-hover:hover {
+  animation: spin 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
