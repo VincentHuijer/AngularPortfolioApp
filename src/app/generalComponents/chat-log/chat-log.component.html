@@ -22,12 +22,16 @@
           <ng-container *ngIf="findPerson(message.toLowerCase()) !== 'None'; else noSkillsFound">
             <app-vaardigheden-response [personName]="findPerson(message.toLowerCase())"></app-vaardigheden-response>
           </ng-container>
-      </div>
-      <ng-template #noSkillsFound>
-        <div>Sorry, het is mij niet duidelijk van wie je de vaardigheden wilt zien. Ik heb hier de vaardigheden van Vincent!</div>
-        <app-vaardigheden-response [personName]="'Vincent'"></app-vaardigheden-response>
+        </div>
+        <div class="bg-[#0F2B0C]" *ngIf="message.includes('portfolio'.toLocaleLowerCase())">
+          <app-portfolio-component/>
+        </div>
+        <ng-template #noSkillsFound>
+          <div>Sorry, het is mij niet duidelijk van wie je de vaardigheden wilt zien. Ik heb hier de vaardigheden van Vincent!</div>
+          <app-vaardigheden-response [personName]="'Vincent'"></app-vaardigheden-response>
 
-      </ng-template>
+        </ng-template>
+      </div>
     </div>
   </div>
 </div>

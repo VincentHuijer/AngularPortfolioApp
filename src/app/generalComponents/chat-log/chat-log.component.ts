@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { VaardighedenResponseComponent } from '../../AIResponses/vaardigheden-response/vaardigheden-response.component';
 import { gsap } from 'gsap';
+import { PortfolioComponentComponent } from '../../AIResponses/portfolio-component/portfolio-component.component';
 
 
 @Component({
   selector: 'app-chat-log',
   standalone: true,
-  imports: [CommonModule, VaardighedenResponseComponent],
+  imports: [CommonModule, VaardighedenResponseComponent, PortfolioComponentComponent],
   templateUrl: './chat-log.component.html',
   styleUrl: './chat-log.component.css'
 })

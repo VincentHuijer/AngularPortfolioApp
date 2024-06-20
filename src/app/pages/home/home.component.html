@@ -42,14 +42,13 @@
   <img #autoHovering class="shake-on-hover autoHovering absolute h-20 w-20 -rotate-3" src="assets/logos/PythonLogo.png" style="left: 600px; top: 5px;">
   <img #autoHovering class="shake-on-hover autoHovering absolute h-20 w-20 -rotate-12" src="assets/logos/AdobeIllustratorLogo.png" style="left: 90vw; top: 800px;">
   <div class="h-screen bg-chat-bg5 bg-cover bg-center flex-grow">
-  <img class="rotater absolute h-20 w-20 rotate-6" src="assets/logos/ReactLogo.png" style="left: 1100px; top: 200px">
-  <!-- top-[200px] alternatief voor tailwind -->
-  <div   class="w-11/12 flex flex-col items-center">
-    <div class="fade-in extended-bold self-start text-[#C6E643] font-serif my-20 ml-10" style="font-size: 200px;">AI Match</div>
-    <!-- <img src="assets/fotos/FMan.png"> -->
-    <!-- <img src="assets/fotos/FManNoArm.png"> -->
-
-      <div class="glassmorphism fade-in items-center bg-[rgb(87,87,87)] rounded-xl p-4 z-20">
+    <img class="rotater absolute h-20 w-20 rotate-6" src="assets/logos/ReactLogo.png" style="left: 1100px; top: 200px">
+    <!-- top-[200px] alternatief voor tailwind -->
+    <div class="w-11/12 flex flex-col items-center">
+      <div class="fade-in extended-bold self-start text-[#C6E643] font-serif my-20 ml-10" style="font-size: 200px;">AI Match</div>
+      <div class="relative">
+        <img src="assets/fotos/FManNoArm.png" style="width: 200px; left: 1070px;" class="absolute top-0 mt-20 mr-20 z-[0]">
+        <div class="glassmorphism fade-in items-center bg-[rgb(87,87,87)] rounded-xl p-4 z-20 relative">
           <div class="w-5/6 mx-auto flex flex-col items-center relative z-20">
               <app-glaring-ball4 class="my-4"></app-glaring-ball4>
               <div class="items-start">
@@ -57,22 +56,20 @@
                   <p class="text-[#a49393] text-2xl">Deze AI chat helpt jou de student te vinden die het beste bij jouw behoeften past.</p>
               </div>
           </div>
-      <img src="assets/fotos/FManNoArm.png" style="width: 200px; left: 1070px;" class="absolute top-0 mt-20 mr-20 z-10">
-        
-        <div class="p-4 h-48 flex justify-between my-10">
-          <app-animatie-button text="Web / Codeer hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#1F1F1F" class="movex-on-hover w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Web / Code hulp')"/>
-          <app-design-button text="Web / Codeer hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#1F1F1F" class="movex-on-hover w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Web / Code hulp')"/>
-          <app-code-button text="Web / Codeer hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#1F1F1F" class="movex-on-hover w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Web / Code hulp')"/>
-          
+          <div class="p-4 h-48 flex justify-between my-10">
+            <app-animatie-button text="Web / Codeer hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#1F1F1F" class="movex-on-hover w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Web / Code hulp')"/>
+            <app-design-button text="Web / Codeer hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#1F1F1F" class="movex-on-hover w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Web / Code hulp')"/>
+            <app-code-button text="Web / Codeer hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#1F1F1F" class="movex-on-hover w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Web / Code hulp')"/>
+          </div>
+          <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
         </div>
-        <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
       </div>
     </div>
   </div>
-  </div>
+</div>
 
 <ng-template #chatContent>
-  <div class="bg-[#1F1F1F] flex items-center justify-center relative">
+  <div class="bg-chat-bg5 bg-cover bg-center flex items-center justify-center relative">
     <div class="flex flex-row my-10">
       <div class="w-4/12 bg-[#353535] mr-10 flex flex-col rounded-xl border-white h-full">
         <div class="flex flex-row items-center text-white p-4">
@@ -122,41 +119,40 @@
   </div>
 </ng-template>
  
-
-
 <div class="bg-white mt-12 p-6"></div> <!-- Wit balkje -->
 
 <div class="relative w-full h-96 overflow-hidden">
-<img src="assets/fotos/Schoolmedia.png"/>
-<div class="w-full flex items-center justify-end p-6 absolute bottom-0 right-0">
-  <div class="spin-on-hover bg-white p-4 rounded-xl flex flex-row">
-    <a href="http://localhost:4200/theon" class="font-bold text-center content-center mr-4 underline cursor-pointer text-2xl">Bekijk portfolio's</a>
-    <app-arrow-button/>
+  <img src="assets/fotos/Schoolmedia.png"/>
+  <div class="w-full flex items-center justify-end p-6 absolute bottom-0 right-0">
+    <div class="spin-on-hover bg-white p-4 rounded-xl flex flex-row">
+      <a href="http://localhost:4200/theon" class="font-bold text-center content-center mr-4 underline cursor-pointer text-2xl">Bekijk portfolio's</a>
+      <app-arrow-button/>
+    </div>
   </div>
-</div>
 </div>
 
 
 <div class="w-full bg-white p-6">
-<div class="p-4 flex justify-evenly">
-  <div class="flex flex-col items-center justify-center text-white rounded-xl mr-2">
-    <div class="text-[#C6E643] text-8xl">AI Chat</div>
+  <div class="p-4 flex justify-evenly">
+    <div class="flex flex-col items-center justify-center text-white rounded-xl mr-2">
+      <div class="text-[#C6E643] text-8xl">AI Chat</div>
+    </div>
+    <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+      <div class="text-[#072807] text-2xl">Portfolio's</div>
+      <div class="text-[#B9B9B9]">Theon</div>
+      <div class="text-[#B9B9B9]">Ashray</div>
+      <div class="text-[#B9B9B9]">Vincent</div>
+      <div class="text-[#B9B9B9]">Mees</div>
+    </div>
+    <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+      <div class="text-[#072807] text-2xl">Over ons</div>
+      <div class="text-[#B9B9B9]">Over ons</div>
+      <div class="text-[#B9B9B9] underline">Onze school</div>
+    </div>
+    <div class="h-full flex flex-col  text-white rounded-xl mr-2">
+      <div class="text-[#072807] text-2xl">Reverenties</div>
+      <div class="text-[#B9B9B9]">ChatGPT</div>
+      <div class="text-[#B9B9B9]">De Haagse Hogeschool</div>
+    </div>       
   </div>
-  <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-    <div class="text-[#072807] text-2xl">Portfolio's</div>
-    <div class="text-[#B9B9B9]">Theon</div>
-    <div class="text-[#B9B9B9]">Ashray</div>
-    <div class="text-[#B9B9B9]">Vincent</div>
-    <div class="text-[#B9B9B9]">Mees</div>
-  </div>
-  <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-    <div class="text-[#072807] text-2xl">Over ons</div>
-    <div class="text-[#B9B9B9]">Over ons</div>
-    <div class="text-[#B9B9B9] underline">Onze school</div>
-  </div>
-  <div class="h-full flex flex-col  text-white rounded-xl mr-2">
-    <div class="text-[#072807] text-2xl">Reverenties</div>
-    <div class="text-[#B9B9B9]">ChatGPT</div>
-    <div class="text-[#B9B9B9]">De Haagse Hogeschool</div>
-  </div>       
 </div>

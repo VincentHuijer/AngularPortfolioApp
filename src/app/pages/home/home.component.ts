@@ -38,11 +38,11 @@ export class HomeComponent implements AfterViewInit {
 
   constructor(private renderer: Renderer2) {}
 
-  userMessages: string[] = [];
-  aiMessages: string[] = [];
+  // userMessages: string[] = [];
+  // aiMessages: string[] = [];
 
-  // userMessages: string[] = ['Toon mij  de vaardigheden van Theon','Wow, indrukwekkend! Zou ik wat van zijn werk kunnen zien?', 'test3'];
-  // aiMessages: string[] = ['response1', 'Tuurlijk! Meer over Theon zijn werk is te vinden op zijn portfolio hier!', 'response3'];
+  userMessages: string[] = ['Toon mij  de vaardigheden van Theon','Wow, indrukwekkend! Zou ik wat van zijn werk kunnen zien?', 'test3', 'portfolio', ];
+  aiMessages: string[] = ['response1', 'Tuurlijk! Meer over Theon zijn werk is te vinden op zijn portfolio hier!', 'response3', 'portfolio'];
 
   onMessageSent(message: string) {
     console.log('userMessages before the message was received:', this.userMessages)
