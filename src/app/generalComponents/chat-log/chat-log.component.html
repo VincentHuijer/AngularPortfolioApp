@@ -23,9 +23,128 @@
             <app-vaardigheden-response [personName]="findPerson(message.toLowerCase())"></app-vaardigheden-response>
           </ng-container>
         </div>
+
         <div class="bg-[#0F2B0C]" *ngIf="message.includes('portfolio'.toLocaleLowerCase())">
           <app-portfolio-component/>
         </div>
+
+
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('Design Hulp'.toLocaleLowerCase())">
+          <div class="text-[#C6E643]">
+            Wat zou je willen weten over design
+          </div>
+        </div>
+
+
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('lul') || message.toLocaleLowerCase().includes('piemel') || message.toLocaleLowerCase().includes('pik')">
+          <div class="text-[#C6E643]">
+            Vraag me is ff wat normaals pik!
+          </div>
+        </div>
+
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('werkervaring'.toLocaleLowerCase())">
+          <div class="text-[#C6E643]">
+            Ik kan je helpen met informatie over werkervaring.
+            <app-vaardigheden-response/>
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('opleiding'.toLocaleLowerCase())">
+          <div class="text-[#C6E643]">
+            Opleiding bij de Haagse Hogeschool.
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('projecten'.toLocaleLowerCase())">
+          <div class="text-[#C6E643]">
+            Kijk maar bij de portfolios
+            <app-portfolio-component/>
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('contact'.toLocaleLowerCase())">
+          <div class="text-[#C6E643]">
+            Voor contact kan je terecht bij
+            <div class="flex flex-col p-4">
+              <div>
+                19107951&#64;student.hhs.nl Ashray
+              </div>
+              <div>
+                20161700&#64;student.hhs.nl Vincent
+              </div>
+              <div>
+                20222653&#64;student.hhs.nl Theon
+              </div>
+              <div>
+                19117213&#64;student.hhs.nl Mees
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('hallo') || message.toLocaleLowerCase().includes('hoi')">
+          <div class="text-[#C6E643]">
+            Hallo! Je kan me dingen vragen. Verras jezelf maar en vraag me iets geks
+          </div>
+        </div>
+
+
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('Thijs') || message.toLocaleLowerCase().includes('William') || message.toLocaleLowerCase().includes('Reyber')">
+          <div class="text-[#C6E643]">
+            Dit zijn de docenten van de K86 CMD Minor. Niet alleen hebben ze ons tijdens dit project en heel het semester ondersteunt maar zijn ze ook heel charmant  
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('iets geks')">
+          <div class="text-[#C6E643]">
+            <img src="assets/fotos/MoggingCat.png">
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('bedankt') || message.toLocaleLowerCase().includes('dankjewel')">
+          <div class="text-[#C6E643]">
+            Graag gedaan!
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('ervaring'.toLocaleLowerCase())">
+          <div class="text-[#C6E643]">
+            <app-portfolio-component/>
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('toekomstplannen'.toLocaleLowerCase())">
+          <div class="text-[#C6E643]">
+            Op naar jaar 4. Lekker zomervakantie. Biertje op het terras.
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('passie'.toLocaleLowerCase())">
+          <div class="text-[#C6E643]">
+            <img src="assets/fotos/graphicDesignIsMyPassion.png">
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('help') || message.toLocaleLowerCase().includes('hulp')">
+          <div class="text-[#C6E643]">
+            Natuurlijk, hoe kan ik je helpen?
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('hoe gaat het')">
+          <div class="text-[#C6E643]">
+            Het gaat goed, bedankt! Hoe gaat het met jou?
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('website bouwen')">
+          <div class="text-[#C6E643]">
+            <a href="/vincent"> Voor websites moet je bij Vincent zijn. Klik hier voor zijn portfolio</a>
+          </div>
+        </div>
+        
+
+        <div>
         <ng-template #noSkillsFound>
           <div>Sorry, het is mij niet duidelijk van wie je de vaardigheden wilt zien. Ik heb hier de vaardigheden van Vincent!</div>
           <app-vaardigheden-response [personName]="'Vincent'"></app-vaardigheden-response>
@@ -34,4 +153,6 @@
       </div>
     </div>
   </div>
+</div>
+
 </div>
