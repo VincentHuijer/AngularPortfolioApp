@@ -30,7 +30,7 @@ import { AnimatieButtonComponent } from '../../generalComponents/animatie-button
   standalone: true,
   imports: [CommonModule, HeaderComponent, MessageComponent, ChatLogComponent, AngleBracketsComponent, AsterikComponent, DesignPencilComponent, AnimationDrawingComponent, FooterComponent, ArrowButtonComponent,HtmlLogoComponent, HulpResponseComponent, GlaringBall4Component, AsterikDarkComponent, ChatBubbleComponent, BurgerMenuComponent, HoverButtonComponent, hoveringAdvancedButton, CodeButtonComponent, DesignButtonComponent, AnimatieButtonComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  styleUrls: ['./home.component.css', '../../../assets/cssguy/Character4-sideFullBody.css']
 })
 
 export class HomeComponent implements AfterViewInit {

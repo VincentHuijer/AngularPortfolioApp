@@ -41,11 +41,13 @@
   <!-- top-[200px] alternatief voor tailwind -->
   <div   class="w-11/12 flex flex-col items-center">
     <div class="extended-bold self-start text-[#C6E643] font-serif" style="font-size: 200px;">AI Match</div>
-    <div class="items-center bg-[rgb(87,87,87)] w-3/6 rounded-xl p-4">
+    <!-- <img src="assets/fotos/FMan.png"> -->
+    <!-- <img src="assets/fotos/FManNoArm.png"> -->
+
+    <div class="items-center bg-[rgb(87,87,87)] rounded-xl p-4">
       <div>
         <div class="w-5/6 mx-auto flex flex-col items-center">
           <app-glaring-ball4 class="my-4"/>
-          <!-- <app-asterik class="rotaterLeft" width="100" height="100"></app-asterik> -->
           <div class="items-start">
             <p class="text-white text-6xl">Hoe kan ik je helpen?</p>
             <p class="text-[#a49393] text-2xl">Deze AI chat helpt jou de student te vinden die het beste bij jouw behoeften past.</p>
@@ -53,31 +55,16 @@
         </div>
       
         <div class="p-4 h-48 flex justify-between my-10">
-          <!-- <app-hover-button text="Animatie hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#969696" class="w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('animatie hulp')"></app-hover-button>
-          <app-hover-button text="Design hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#969696" class="w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Design hulp')"></app-hover-button>
-          <app-hover-button text="Web / Codeer hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#969696" class="w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Web / Code hulp')"></app-hover-button> -->
           <app-animatie-button text="Web / Codeer hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#1F1F1F" class="movex-on-hover w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Web / Code hulp')"/>
           <app-design-button text="Web / Codeer hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#1F1F1F" class="movex-on-hover w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Web / Code hulp')"/>
           <app-code-button text="Web / Codeer hulp" height="500px" width="350px" hoverColor="#C6E643" defaultColor="#1F1F1F" class="movex-on-hover w-4/12 h-full flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Web / Code hulp')"/>
-          <!-- <div #button class="w-4/12 h-full bg-[#969696] flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('animatie hulp')">
-            <app-animation-drawing/>
-            <div class="text-2xl">animatie hulp</div>
-            <div class="text-[#D3D3D3]">Hier komt een kleine text</div>
-          </div> -->
-          <!-- <div class="w-4/12 h-full bg-[#969696] flex flex-col items-center justify-center text-white rounded-xl mr-2" (click)="onMessageSent('Design hulp hulp')">
-            <app-design-pencil/>
-            <div class="text-2xl">Design hulp</div>
-            <div class="text-[#D3D3D3]">Hier komt een kleine text</div>
-          </div>
-          <div class="w-4/12 h-full bg-[#969696] flex flex-col items-center justify-center text-white rounded-xl" (click)="onMessageSent('Web / Code hulp')">
-            <app-angle-brackets/>
-            <div class="text-2xl">Web / Code hulp</div>
-            <div class="text-[#D3D3D3]">Hier komt een kleine text</div>
-          </div> -->
+          
         </div>
         <app-message-component (messageSent)="onMessageSent($event)"></app-message-component>
       </div>
     </div>
+    <img src="assets/fotos/FManNoArm.png">
+
   </div>
 </div>
 
