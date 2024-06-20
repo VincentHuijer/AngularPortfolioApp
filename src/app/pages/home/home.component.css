@@ -97,3 +97,30 @@ img.shake-on-hover:hover {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/*mannetje */
+@keyframes slideIn {
+  0% {
+      transform: translateX(100%); /* Start off-screen */
+  }
+  100% {
+      transform: translateX(0); /* End in place */
+  }
+}
+
+.arm {
+  position: absolute;
+  right: -50px; /* Adjust based on the size of the arm */
+  top: 50%;
+  transform: translateY(-50%);
+  animation: slideIn 1s forwards;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(87, 87, 87);
+  border-radius: 1rem;
+  padding: 1rem;
+}
