@@ -50,6 +50,18 @@
           </div>
         </div>
 
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('wat is je favoriete hobby')">
+          <div class="text-[#C6E643]">
+            Mijn favoriete hobby is het helpen van mensen met hun vragen!
+          </div>
+        </div>
+        
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('hoe oud ben je')">
+          <div class="text-[#C6E643]">
+            Ik ben slechts een paar jaar oud in computerjaren, maar ik voel me altijd fris en up-to-date!
+          </div>
+        </div>
+        
 
         <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('lul') || message.toLocaleLowerCase().includes('piemel') || message.toLocaleLowerCase().includes('pik')">
           <div class="text-[#C6E643]">
