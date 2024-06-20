@@ -29,9 +29,24 @@
         </div>
 
 
-        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('Design Hulp'.toLocaleLowerCase())">
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('Design'.toLocaleLowerCase())">
           <div class="text-[#C6E643]">
-            Wat zou je willen weten over design
+            voor design hulp kan je het best zijn bij Theon
+            <app-vaardigheden-response [personName]="'Theon'"/>
+          </div>
+        </div>
+
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('animatie'.toLocaleLowerCase())">
+          <div class="text-[#C6E643]">
+            voor animatie hulp kan je het best zijn bij Ashray
+            <app-vaardigheden-response [personName]="'Ashray'"/>
+          </div>
+        </div>
+
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('web'.toLocaleLowerCase()) || message.includes('programming'.toLocaleLowerCase()) || message.includes('code'.toLocaleLowerCase()) || message.includes('frontend'.toLocaleLowerCase()) || message.includes('CSS'.toLocaleLowerCase())">
+          <div class="text-[#C6E643]">
+            Voor web of programmeer gerelateerde vragen kan je het best terecht bij Vincent
+            <app-vaardigheden-response [personName]="'Vincent'"/>
           </div>
         </div>
 
