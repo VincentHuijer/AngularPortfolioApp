@@ -1,21 +1,21 @@
 <div *ngIf="userMessages.length > 0 || aiMessages.length > 0">
   <div *ngFor="let message of userMessages; let i = index">
     <div class="flex justify-end mb-2" *ngIf="message">
-      <div class="bg-gray-300 p-4 rounded-lg max-w self-end">
-        <div class="text-[#969696] text-right">
+      <div class="bg-zinc-600 p-4 rounded-lg max-w self-end">
+        <div class="text-white text-right">
           Jij
         </div>
-        <div class="text-[#969696]">
+        <div class="text-white">
           {{ message }}
         </div>
       </div>
     </div>
     <div *ngIf="aiMessages[i]" class="flex justify-start mb-2">
-      <div class="bg-slate-300 p-4 rounded-lg max-w self-start">
+      <div class="glassmorphism bg-[#E8FF8833] p-4 rounded-lg max-w self-start">
         <div class="text-[#C6E643] font-bold">
           AI Chat
         </div>
-        <div #textContainer>
+        <div #textContainer class="text-white">
           {{ aiMessages[i] }}
         </div>
         <div *ngIf="message.includes('vaardigheden'.toLocaleLowerCase())">
