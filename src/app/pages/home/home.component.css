@@ -145,6 +145,22 @@ border-radius: 10px;
 }
 
 .fade-in {
-  opacity: 0;
+  /* opacity: 0; */
   animation: fade-in 4s ease-in-out forwards; 
+}
+
+.armRotate {
+  transform: rotate(0deg);
+  animation: wave 1s infinite alternate-reverse;
+  transform-origin: bottom;
+
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
 }
