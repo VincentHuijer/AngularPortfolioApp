@@ -28,17 +28,18 @@
           <app-portfolio-component/>
         </div>
 
-        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('Design'.toLocaleLowerCase())">
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('design'.toLocaleLowerCase())">
           <div class="text-[#C6E643]">
-            voor design hulp kan je het best zijn bij Theon
+            voor design hulp kan je het best zijn bij Ashray of bij Theon
+            <app-vaardigheden-response [personName]="'Ashray'"/>
             <app-vaardigheden-response [personName]="'Theon'"/>
           </div>
         </div>
 
-        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('animatie'.toLocaleLowerCase())">
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('animatie'.toLocaleLowerCase()) || message.includes('animation'.toLocaleLowerCase())">
           <div class="text-[#C6E643]">
-            voor animatie hulp kan je het best zijn bij Ashray
-            <app-vaardigheden-response [personName]="'Ashray'"/>
+            voor animatie hulp kan je het best zijn bij Theon
+            <app-vaardigheden-response [personName]="'Theon'"/>
           </div>
         </div>
 
@@ -151,11 +152,11 @@
           </div>
         </div>
         
-        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('help') || message.toLocaleLowerCase().includes('hulp')">
+        <!-- <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('help') || message.toLocaleLowerCase().includes('hulp')">
           <div class="text-[#C6E643]">
             Het antwoord is 42
           </div>
-        </div>
+        </div> -->
         
         <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('hoe gaat het')">
           <div class="text-[#C6E643]">

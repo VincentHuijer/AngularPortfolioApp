@@ -8,6 +8,7 @@ import { CssAnimationsLearningPageComponent } from './pages/css-animations-learn
 import { GsapAnimationsLearningPageComponent } from './pages/gsap-animations-learning-page/gsap-animations-learning-page.component';
 import { GsapAnimations2Component } from './pages/gsap-animations2/gsap-animations2.component';
 import { TestPageComponent } from './pages/test-page/test-page.component';
+import { OverOnsComponent } from './pages/over-ons/over-ons.component';
 
 
 export const routes: Routes = [
@@ -20,5 +21,6 @@ export const routes: Routes = [
   { path: 'css-animations', component: CssAnimationsLearningPageComponent },
   { path: 'gsap-animations', component: GsapAnimationsLearningPageComponent },
   { path: 'gsap-animations2', component: GsapAnimations2Component },
-  { path: 'testpage', component: TestPageComponent }
+  { path: 'testpage', component: TestPageComponent },
+  { path: 'overons', component: OverOnsComponent}
 ];
