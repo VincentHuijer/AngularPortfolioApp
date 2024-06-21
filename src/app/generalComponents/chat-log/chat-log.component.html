@@ -28,7 +28,6 @@
           <app-portfolio-component/>
         </div>
 
-
         <div class="bg-[#0F2B0C] p-4" *ngIf="message.includes('Design'.toLocaleLowerCase())">
           <div class="text-[#C6E643]">
             voor design hulp kan je het best zijn bij Theon
@@ -61,7 +60,6 @@
             Ik ben slechts een paar jaar oud in computerjaren, maar ik voel me altijd fris en up-to-date!
           </div>
         </div>
-        
 
         <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('lul') || message.toLocaleLowerCase().includes('piemel') || message.toLocaleLowerCase().includes('pik')">
           <div class="text-[#C6E643]">
@@ -118,7 +116,8 @@
 
         <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('Thijs') || message.toLocaleLowerCase().includes('William') || message.toLocaleLowerCase().includes('Reyber')">
           <div class="text-[#C6E643]">
-            Dit zijn de docenten van de K86 CMD Minor. Niet alleen hebben ze ons tijdens dit project en heel het semester ondersteunt maar zijn ze ook heel charmant  
+            Dit zijn de docenten van de K86 CMD Minor.
+            Niet alleen hebben ze ons tijdens dit project en heel het semester ondersteunt maar zijn ze ook heel charmant
           </div>
         </div>
         
@@ -176,16 +175,14 @@
           </div>
         </div>
         
-
         <div>
-        <ng-template #noSkillsFound>
-          <div>Sorry, het is mij niet duidelijk van wie je de vaardigheden wilt zien. Ik heb hier de vaardigheden van Vincent!</div>
-          <app-vaardigheden-response [personName]="'Vincent'"></app-vaardigheden-response>
+          <ng-template #noSkillsFound>
+            <div>Sorry, het is mij niet duidelijk van wie je de vaardigheden wilt zien. Ik heb hier de vaardigheden van Vincent!</div>
+            <app-vaardigheden-response [personName]="'Vincent'"></app-vaardigheden-response>
 
-        </ng-template>
+          </ng-template>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
 </div>
