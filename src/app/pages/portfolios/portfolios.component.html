@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<div class=" h-screen bg-black flex">
-  <div class="h-screen bg-chat-bg4 bg-cover bg-center flex-grow"> <!-- changed from h-full on my PC desktop-->
-
-  <div class="glassmorphism flex-1 bg-[#4C4C4C] rounded-xl flex m-7 p-4">
-    <div class="flex flex-col w-6/12">
-      <div class="flex flex-row">
-        <app-glaring-ball4 class="p-4 ml-4"/>
-      <div class="extended-bold self-start text-white text-5xl pt-4 mb-4">AI MATCH</div>
-      </div>
+<div class="h-screen bg-black flex items-center justify-center">
+  <div class="relative w-full h-full bg-chat-bg4 bg-cover bg-center">
+    <div class="glassmorphism absolute inset-0 m-7 p-4 rounded-xl">
+      <div class="flex flex-col w-6/12">
+        <div class="flex flex-row">
+          <app-glaring-ball4 class="p-4 ml-4"/>
+          <div class="extended-bold self-start text-white text-5xl pt-4 mb-4">AI MATCH</div>
+        </div>
         <div class="w-4/5 ml-8">
-        <div class="text-5xl my-4 text-white"> Portfolio's</div>
-
-        
+          <div class="text-5xl my-4 text-white"> Portfolio's</div>
         </div>
       </div>
+      <div class="flex flex-col items-center justify-center"> <!-- This line alone makes the zoom in-out bad. Remove if bad on laptop-->
+        <div class="flex flex-row">
+          <a href="/ashray">
+            <img class="p-4 rounded-[50px]" src="assets/fotos/portfolioImages/AshrayImage.png">
+          </a>
+          <a href="/theon">
+            <img class="p-4 rounded-[50px]" src="assets/fotos/portfolioImages/TheonImage.png">
+          </a>
+        </div>
+        <div class="flex flex-row">
+          <a href="/vincent">
+            <img class="p-4 rounded-[50px]" src="assets/fotos/portfolioImages/VincentImage.png">
+          </a>
+          <a href="/mees">
+            <img class="p-4 rounded-[50px]" src="assets/fotos/portfolioImages/MeesImage.png">
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 </div>
