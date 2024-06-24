@@ -25,6 +25,12 @@
         </div>
 
         <div class="bg-[#0F2B0C]" *ngIf="message.includes('portfolio'.toLocaleLowerCase())">
+          <div class="text-[#C6E643] p-4">
+            De portfolio's van de studenten zijn makkelijk te vinden op de portfolio's pagina. Klik <a class="underline" href="/portfolios">hier</a>
+          </div>
+          <div class="text-[#C6E643] p-4 mt-4">
+            alternatief kan je ook een van de portfolio's bezoeken door een van de studentennamen aan te klikken.
+          </div>
           <app-portfolio-component/>
         </div>
 
@@ -59,6 +65,12 @@
         <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('hoe oud ben je')">
           <div class="text-[#C6E643]">
             Ik ben slechts een paar jaar oud in computerjaren, maar ik voel me altijd fris en up-to-date!
+          </div>
+        </div>
+
+        <div class="bg-[#0F2B0C] p-4" *ngIf="message.toLocaleLowerCase().includes('over ons') || message.toLocaleLowerCase().includes('meer weten') || message.toLocaleLowerCase().includes('meer willen weten') || message.toLocaleLowerCase().includes('meer over jullie weten')">
+          <div class="text-[#C6E643]">
+            Als je meer over ons zou willen weten bekijk misschien onze over ons pagina <a class="underline" href="/overons"> hier</a>
           </div>
         </div>
 
