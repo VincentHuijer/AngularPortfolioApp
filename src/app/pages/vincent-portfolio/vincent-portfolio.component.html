@@ -1,118 +1,131 @@
 <!DOCTYPE html>
-<div class="h-screen bg-black flex">
-  <div class="flex-1 bg-white rounded-xl flex my-6 mx-4">
-    <!-- why does justify center not do what I want it to -->
-    <div class="flex flex-row">
-      <app-asterik-dark class="p-4"/>
-      <div class="flex flex-col w-6/12">
-        <div class="extended-bold self-start text-black font-serif text-5xl pt-4 mb-6">AI Chat</div>
-        <div class="">
-          <div class="text-5xl"> Portfolio van Vincent</div>
+<div class=" h-screen bg-black flex">
+  <div class="h-screen bg-chat-bg4 bg-cover bg-center flex-grow"> <!-- changed from h-full on my PC desktop-->
 
-          <div>
-            <div class="border-2 border-[#C6E643] rounded-full p-4 bg-[#F8FFDB] text-center">
-              Branding
-            </div>
-            <div class="text-[#969696]"> Met een branding zal je merk zich onderscheiden van de massa door ervaring in onderzoek doen en het werken in programma’s zoals ai weet ik wat u merk nodig heeft </div>
-            <div>
-              <app-skill-bar 
-                name="Adobe Illustrator" 
-                logo="AdobeIllustratorLogo.png" 
-                [percentage]="80">
-              </app-skill-bar>
-              <app-skill-bar 
-                name="AdobeXd" 
-                logo="AdobeXdLogo.png" 
-                [percentage]="65">
-              </app-skill-bar>      
-            </div>
+  <div class="glassmorphism flex-1 bg-[#4C4C4C] rounded-xl flex m-7 p-4">
+    <div class="flex flex-col w-6/12">
+      <div class="flex flex-row">
+        <app-glaring-ball4 class="p-4 ml-4"/>
+      <div class="extended-bold self-start text-white text-5xl pt-4 mb-4">AI MATCH</div>
+      </div>
+        <div class="w-4/5 ml-8">
+        <div class="text-5xl my-4 text-white"> Portfolio van Vincent</div>
+
+        <div class="mb-10">
+          <div class="border-2 border-[#C6E643] rounded-full p-4 bg-[#F8FFDB] text-center inline-block my-7">
+            Frontend
           </div>
+          <div class="text-[#969696] mb-2 text-2xl"> De ervaringen die ik heb opgebouwd in de frontend </div>
           <div>
-            <div class="border-2 border-[#E756FF] rounded-full p-4 bg-[#F9D7FF] text-center">
-              Development
-            </div>
-            <div class="text-[#969696]"> het ontwikkelen van een website wordt gedaan in het programma webflow </div>
-            <div>
-              <app-skill-bar 
-                name="Adobe Illustrator" 
-                logo="AdobeIllustratorLogo.png" 
-                [percentage]="80">
-              </app-skill-bar>
-              <app-skill-bar 
-                name="AdobeXd" 
-                logo="AdobeXdLogo.png" 
-                [percentage]="65">
-              </app-skill-bar>      
-            </div>
+            <app-skill-bar 
+              name="React" 
+              logo="ReactLogo.png" 
+              [percentage]="95">
+            </app-skill-bar>
+            <app-skill-bar 
+              name="Vue" 
+              logo="VueLogo.png" 
+              [percentage]="85">
+            </app-skill-bar>
+            <app-skill-bar 
+              name="React Native" 
+              logo="ReactLogo.png" 
+              [percentage]="70">
+            </app-skill-bar>
+            <app-skill-bar 
+              name="Angular" 
+              logo="AngularLogo.png" 
+              [percentage]="50">
+            </app-skill-bar>
           </div>
+        </div>
+        <div>
+          <div class="border-2 border-[#E756FF] rounded-full p-4 bg-[#F9D7FF] text-center inline-block mt-0 mb-4">
+            Backend
+          </div>
+          <div class="text-[#969696] mb-2 text-2xl"> De ervaringen die ik heb opgebouwd in de backend </div>
           <div>
-            <div class="border-2 border-[#5685FF] rounded-full p-4 bg-[#E5ECFF] text-center">
-              UX - UI
-            </div>
-            <div class="text-[#969696]"> Door opgedane kennis weet ik hoe ik als ux - ui designer tot een goed web-design moet komen die gebruiksvriendelijk voor de gebruiker is </div>
-            <div>
-              <app-skill-bar 
-                name="Adobe Illustrator" 
-                logo="AdobeIllustratorLogo.png" 
-                [percentage]="80">
-              </app-skill-bar>
-              <app-skill-bar 
-                name="AdobeXd" 
-                logo="AdobeXdLogo.png" 
-                [percentage]="65">
-              </app-skill-bar>      
+            <app-skill-bar 
+              name="C#" 
+              logo="CSharpLogo.png" 
+              [percentage]="70">
+            </app-skill-bar>
+            <app-skill-bar 
+              name="Java" 
+              logo="JavaLogo.png" 
+              [percentage]="70">
+            </app-skill-bar>      
+            <app-skill-bar 
+              name="Python" 
+              logo="PythonLogo.png" 
+              [percentage]="50">
+            </app-skill-bar>      
+          </div>
+        </div>
+        <div>
+          <div class="border-2 border-[#5685FF] rounded-full p-4 bg-[#E5ECFF] text-center inline-block my-7">
+            SQL
+          </div>
+          <div class="text-[#969696] mb-2 text-2xl"> De ervaringen die ik heb opgebouwd met databases zijn </div>
+          <div>
+            <app-skill-bar 
+              name="Supabase" 
+              logo="Supabase.jpg" 
+              [percentage]="70">
+            </app-skill-bar>
+            <app-skill-bar 
+              name="MS SQL" 
+              logo="MicrosoftSqlLogo.png" 
+              [percentage]="65">
+            </app-skill-bar>      
+            <app-skill-bar 
+              name="MySql" 
+              logo="mysqlLogo.png" 
+              [percentage]="50">
+            </app-skill-bar>      
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+    <div class="w-6/12 h-full overflow-hidden">
+      <div class="p-10 flex flex-col h-full">
+        <div class="relative w-full overflow-hidden">
+          <!-- <img class="rounded-3xl mb-10" src="assets/fotos/Hubbs.png" alt="Hubbs Foto"> -->
+          <img class="rounded-3xl mb-4 h-60%" src="assets/fotos/TheaterLaak.png" alt="Theater Laak">
+
+          
+          <div class="w-full flex items-center p-6 absolute bottom-4 right-0">
+            <div class="flex flex-row">
+              <a href="https://vincenthuijer.netlify.app/TheaterLaak" class="text-5xl text-white">Theater Laak</a>
+              <app-link-arrow/>
             </div>
           </div>
         </div>
-      </div>  
-
-
-      <div class="w-6/12 h-full overflow-hidden">
-        <div class="p-8 flex flex-col h-full">
-          <div class="relative w-full overflow-hidden">
-            <img class="rounded-3xl mb-4 h-60%" src="assets/fotos/TheaterLaak.png" alt="Theater Laak">
-            
-            <div class="w-full flex items-center p-6 absolute top-0 justify-end left-0">
-              <div class="flex flex-col p-3 bg-[#F2F2F2] rounded-xl">
-                <div class="flex flex-row">
-                  <div class="border-2 border-[#C6E643] rounded-full p-4 bg-[#F8FFDB] text-center">
-                    React
-                  </div>
-                  <div class="border-2 border-[#5685FF] rounded-full p-4 bg-[#E5ECFF] text-center">
-                    C#
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-full flex items-center p-6 absolute bottom-4 right-0">
+        <div class="flex flex-row">
+          <div class="relative w-full overflow-hidden mb-4">
+            <img class="rounded-3xl mr-4 h-full w-full object-cover" src="assets/fotos/Betabit.png" alt="Betabit" href="">
+            <div class="w-full flex items-center p-6 absolute bottom-0 right-0">
               <div class="flex flex-row">
-                <a href="https://vincenthuijer.netlify.app/TheaterLaak" class="text-5xl text-white">Theater Laak</a>
-                <app-link-arrow/>
+                <a href="https://vincenthuijer.netlify.app/Betabit" class="text-4xl text-black">Betabit.nl</a>
+                <app-link-arrow fill="black"/>
               </div>
             </div>
           </div>
-          <div class="flex flex-row">
-            <div class="relative w-full overflow-hidden mb-4">
-              <img class="rounded-3xl mr-4" src="assets/fotos/Betabit.png" alt="Betabit" href="">
-              <div class="w-full flex items-center p-6 absolute bottom-0 right-0">
-                <div class="flex flex-row">
-                  <a href="https://vincenthuijer.netlify.app/Betabit" class="text-4xl text-black">Betabit</a>
-                  <app-link-arrow fill="black"/>
-                </div>
-              </div>
-            </div>
-            <div class="relative w-full overflow-hidden mb-4">
-              <img class="rounded-3xl ml-2" src="assets/logos/VueLogo.png" alt="Uniware Vue">
-              <div class="w-full flex items-center p-6 absolute bottom-0 right-0">
-                <div class="flex flex-row">
-                  <a href="https://vincenthuijer.netlify.app/Uniware" class="text-4xl text-black">Uniware</a>
-                  <app-link-arrow fill="black"/>
-                </div>
+          <div class="relative w-full overflow-hidden mb-4">
+            <img class="rounded-3xl ml-2 h-full w-full object-cover" src="assets/fotos/UniwareBloemen.png" alt="Uniware Vue">
+            <div class="w-full flex items-center p-6 absolute bottom-0 right-0">
+              <div class="flex flex-row">
+                <a href="https://vincenthuijer.netlify.app/Uniware" class="text-4xl text-white">Uniware.nl</a>
+                <app-link-arrow/>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>  
-  </div>
+    </div>
+  </div>  
+</div>
+
 </div>
