@@ -12,8 +12,13 @@
     </div>
     <div *ngIf="aiMessages[i]" class="flex justify-start mb-2">
       <div class="glassmorphism bg-[#E8FF8833] p-4 rounded-lg max-w self-start">
-        <div class="text-[#C6E643] font-bold">
-          AI Chat
+        <div class="flex flex-row text-center">
+
+          <img class="w-7 h-7 bg-white rounded-xl" src="assets/fotos/mannetjeHoofd.png">
+          <div class="text-[#C6E643] font-bold text-center">
+            AI Chat
+            
+          </div>
         </div>
         <div #textContainer class="text-white">
           {{ aiMessages[i] }}
