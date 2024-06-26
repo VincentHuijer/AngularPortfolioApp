@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist/angular-portfolio-app/browser/browser"
+  publish = "dist/angular-portfolio-app/browser/browser/browser"
 
 [context.production.environment]
   NODE_VERSION = "14"
