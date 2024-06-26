@@ -1,5 +1,5 @@
 ## Install packages before loading up the application
-Run 'npm i' for packages
+Run `npm i` to install the necessary packages
 
 
 ## Development server
