@@ -1,9 +1,0 @@
-[build]
-  command = "npm run build"
-  publish = "dist/angular-portfolio-app/browser"
-
-[context.production.environment]
-  NODE_VERSION = "14"
-
-[[plugins]]
-  package = "@netlify/angular-runtime"
